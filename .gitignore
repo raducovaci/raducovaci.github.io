@@ -1,0 +1,4 @@
+tmp/
+.venv/
+assets/docs/raw/
+assets/images/generated/*.png

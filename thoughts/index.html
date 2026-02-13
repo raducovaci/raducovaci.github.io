@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thoughts | Radu Covaci</title>
+    <meta
+      name="description"
+      content="Short essays by Radu Covaci on psychology, AI psychology, and neuroscience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css?v=20260212t" />
+  </head>
+  <body class="thoughts-page">
+    <div class="page-glow page-glow--one" aria-hidden="true"></div>
+    <div class="page-glow page-glow--two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="/">Radu Covaci</a>
+      <div class="site-header__actions">
+        <nav class="site-nav" aria-label="Main">
+          <a class="site-nav__link" href="/">Home</a>
+          <a class="site-nav__link site-nav__link--active" href="/thoughts/">Thoughts</a>
+        </nav>
+        <button
+          id="themeToggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icons" aria-hidden="true">
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24">
+              <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-4.5a.75.75 0 0 1 .75.75V5a.75.75 0 0 1-1.5 0V3.25a.75.75 0 0 1 .75-.75Zm0 16a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-1.75a.75.75 0 0 1 .75-.75ZM4.93 6a.75.75 0 0 1 1.06 0l1.24 1.23A.75.75 0 1 1 6.17 8.3L4.93 7.05a.75.75 0 0 1 0-1.06Zm11.84 11.84a.75.75 0 0 1 1.06 0l1.24 1.24a.75.75 0 1 1-1.06 1.06l-1.24-1.24a.75.75 0 0 1 0-1.06ZM2.5 12a.75.75 0 0 1 .75-.75H5a.75.75 0 0 1 0 1.5H3.25A.75.75 0 0 1 2.5 12Zm16.5 0a.75.75 0 0 1 .75-.75h1.75a.75.75 0 0 1 0 1.5h-1.75A.75.75 0 0 1 19 12ZM6.17 15.7a.75.75 0 1 1 1.06 1.07l-1.24 1.24a.75.75 0 0 1-1.06-1.06l1.24-1.25Zm11.66-8.47a.75.75 0 0 1-1.06-1.06l1.24-1.24a.75.75 0 0 1 1.06 1.06l-1.24 1.24Z" />
+            </svg>
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24">
+              <path d="M14.2 2.55a.75.75 0 0 1 .78.98 8.35 8.35 0 0 0 10.49 10.49.75.75 0 0 1 .98.78 10.03 10.03 0 1 1-12.25-12.25Z" />
+            </svg>
+          </span>
+          <span class="theme-toggle__label">Night</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="thoughts-main container">
+      <section class="thoughts-intro reveal" style="--delay: 0.04s">
+        <p class="eyebrow">Thoughts</p>
+        <h1>Scattered notes on mind, behavior, and intelligence.</h1>
+        <p>
+          Short essays and working notes on predictive processing, interoception,
+          depression research, and multimodal social neuroscience.
+        </p>
+      </section>
+
+      <section class="thoughts-feed">
+        <article class="thought-entry reveal" style="--delay: 0.08s">
+          <p class="thought-entry__meta">January 2026 - Draft</p>
+          <h2>Allostasis as a Computational Story</h2>
+          <p>
+            A concise case for treating allostasis and active inference as a
+            practical bridge between neuroscience theory and model design.
+          </p>
+        </article>
+
+        <article class="thought-entry reveal" style="--delay: 0.1s">
+          <p class="thought-entry__meta">January 2026 - Draft</p>
+          <h2>Constructed Emotion in the Age of AI</h2>
+          <p>
+            How emotion as construction can sharpen interpretation, labeling,
+            and scientific caution in AI-assisted psychological research.
+          </p>
+        </article>
+
+        <article class="thought-entry reveal" style="--delay: 0.12s">
+          <p class="thought-entry__meta">January 2026 - Draft</p>
+          <h2>Modeling Social Synchrony From Multimodal Data</h2>
+          <p>
+            What video, audio, and fNIRS reveal together, and where current
+            methods still fail to capture interaction structure.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; <span id="year"></span> Radu Covaci. Thoughtful work in progress.
+        Made with Codex.
+      </p>
+    </footer>
+
+    <script src="/script.js?v=20260213c"></script>
+  </body>
+</html>

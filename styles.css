@@ -846,11 +846,6 @@ main {
   transition: color 0.18s ease;
 }
 
-.highlight-title-copy {
-  flex: 1;
-  min-width: 0;
-}
-
 .highlight-title-link:hover {
   color: var(--accent);
 }

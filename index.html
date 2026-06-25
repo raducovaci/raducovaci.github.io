@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radu N. Covaci | Interactive CV</title>
+    <meta
+      name="description"
+      content="Interactive curriculum vitae for Radu N. Covaci, MSc in Mind and Body Sciences and psychologist."
+    />
+    <meta name="theme-color" content="#f4f2ed" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var storedTheme = window.localStorage.getItem("rc-theme");
+          var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = storedTheme || (prefersDark ? "dark" : "light");
+          document.documentElement.dataset.theme = theme;
+        } catch (_error) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles.css?v=20260625f" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to CV</a>
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to dark mode"
+      aria-pressed="false"
+    >
+      <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+        </svg>
+      </span>
+      <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M21 14.3A8.5 8.5 0 0 1 9.7 3a7.2 7.2 0 1 0 11.3 11.3Z"></path>
+        </svg>
+      </span>
+    </button>
+
+    <main id="main" class="cv-main">
+      <div id="cvWorkspace" class="cv-workspace">
+        <article class="cv-sheet" aria-label="Interactive curriculum vitae">
+          <header class="cv-top">
+            <div>
+              <p class="cv-kicker">Curriculum Vitae</p>
+              <h1>Radu N. Covaci</h1>
+            </div>
+            <div class="cv-top__side">
+              <p class="cv-role">MSc in Mind and Body<br />Sciences, Psychologist</p>
+              <a
+                class="cv-download"
+                href="/assets/docs/public/cv-en-radu-covaci.pdf"
+                download
+                aria-label="Download CV as PDF"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3.75v10.5m0 0 3.25-3.25M12 14.25 8.75 11"></path>
+                  <path d="M5 16.25v2.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-2.5"></path>
+                </svg>
+                <span>Download CV</span>
+              </a>
+            </div>
+          </header>
+
+          <section class="cv-section cv-section--contacts" aria-labelledby="contacts-heading">
+            <h2 id="contacts-heading">Contacts</h2>
+            <div class="cv-section__body">
+              <p><strong>Email:</strong> raducovaci10 at gmail dot com</p>
+              <div class="contact-actions" aria-label="External links">
+                <a
+                  class="contact-action"
+                  href="https://github.com/raducovaci/raducovaci.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open this website repository on GitHub"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.25A9.75 9.75 0 0 0 8.92 21.25c.49.09.67-.21.67-.47v-1.72c-2.72.59-3.3-1.17-3.3-1.17-.44-1.12-1.08-1.42-1.08-1.42-.88-.6.07-.59.07-.59.98.07 1.49 1 1.49 1 .87 1.48 2.27 1.05 2.82.8.09-.63.34-1.05.62-1.29-2.17-.25-4.46-1.09-4.46-4.84 0-1.07.38-1.94 1-2.63-.1-.25-.43-1.25.1-2.59 0 0 .82-.26 2.68 1a9.22 9.22 0 0 1 4.88 0c1.86-1.26 2.68-1 2.68-1 .53 1.34.2 2.34.1 2.59.63.69 1 1.56 1 2.63 0 3.76-2.29 4.59-4.47 4.83.35.3.66.9.66 1.82v2.69c0 .26.18.56.68.47A9.75 9.75 0 0 0 12 2.25Z" />
+                  </svg>
+                  <span>GitHub repo</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="cv-section" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Professional<br />Experience</h2>
+            <div class="cv-section__body">
+              <div class="cv-entry">
+                <h3>
+                  <button class="cv-hotspot cv-hotspot--blue" type="button" data-detail="academic-research">
+                    Academic Research (2024-ongoing)
+                  </button>
+                </h3>
+                <p>
+                  Master's thesis research on the
+                  <button class="cv-hotspot cv-hotspot--inline cv-hotspot--blue" type="button" data-detail="masters-thesis">
+                    computational aspects of social synchronicity
+                  </button>,
+                  with a focus on extracting social features from
+                  <strong>multimodal data</strong>
+                  <a
+                    class="cv-reference-link cv-reference-link--person cv-reference-link--blue"
+                    href="https://scholar.google.com/citations?user=tR--pu0AAAAJ&amp;hl=it&amp;oi=ao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    (under <span class="cv-reference-link__label">Prof. Diano</span>)
+                  </a>.
+                </p>
+              </div>
+
+              <div class="cv-entry">
+                <h3>
+                  <button class="cv-hotspot cv-hotspot--rose" type="button" data-detail="psychology-traineeship">
+                    Psychology Traineeship (2026)
+                  </button>
+                </h3>
+                <p>
+                  Six-month placement as a trainee psychologist in the
+                  <strong class="cv-static-highlight cv-static-highlight--rose">
+                    Clinical Psychology
+                  </strong>
+                  unit at Molinette Hospital, Turin, specialising in psycho-oncology
+                  <a
+                    class="cv-reference-link cv-reference-link--person cv-reference-link--rose"
+                    href="https://www.corep.it/anticorruzione_trasparenza/CURRICULA/STANIZZO%20MARIA%20ROSA.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    (under <span class="cv-reference-link__label">Prof. Stanizzo</span>)
+                  </a>.
+                </p>
+              </div>
+
+              <div class="cv-entry">
+                <h3>
+                  <button class="cv-hotspot cv-hotspot--blue" type="button" data-detail="student-research-assistant">
+                    Student Research Assistant (2024)
+                  </button>
+                </h3>
+                <p>
+                  Contributed to two research projects: one on
+                  <button class="cv-hotspot cv-hotspot--inline cv-hotspot--blue" type="button" data-detail="visual-perception">
+                    visual perception
+                  </button>
+                  <a
+                    class="cv-reference-link cv-reference-link--blue"
+                    href="https://www.sciencedirect.com/science/article/pii/S1053810025000236"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    (Consciousness and Cognition, 2025)
+                  </a>
+                  and one on the
+                  <button class="cv-hotspot cv-hotspot--inline cv-hotspot--blue" type="button" data-detail="placebo-effect">
+                    placebo effect
+                  </button>
+                  <a
+                    class="cv-reference-link cv-reference-link--person cv-reference-link--blue"
+                    href="https://unifind.unito.it/individual?uri=http://irises.unito.it/resource/person/91427"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    (under <span class="cv-reference-link__label">Prof. Piedimonte</span>)
+                  </a>.
+                </p>
+              </div>
+
+              <div class="cv-entry">
+                <h3>
+                  <button class="cv-hotspot cv-hotspot--rose" type="button" data-detail="medical-internship">
+                    Medical Student Internship (2019-2020)
+                  </button>
+                </h3>
+                <p>
+                  Emergency department placement at Ospedale Santa Chiara, Trento, Italy.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="cv-section" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical<br />Skills</h2>
+            <div class="cv-section__body">
+              <div class="cv-skill-grid">
+                <div class="cv-skill-block cv-skill-block--blue">
+                  <h3>
+                    <span class="cv-static-highlight cv-static-highlight--blue">
+                      Neuroimaging &amp; Data Acquisition
+                    </span>
+                  </h3>
+                  <ul>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="masters-thesis,placebo-effect"
+                      data-evidence-label="Master's thesis and placebo-effect research"
+                    >
+                      EEG and fNIRS collection and preprocessing
+                    </li>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="masters-thesis,fnirs-paper"
+                      data-evidence-label="Master's thesis and higher-order fNIRS paper"
+                    >
+                      Hyperscanning for multiple-subject paradigms
+                    </li>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="masters-thesis"
+                      data-evidence-label="Master's thesis"
+                    >
+                      Multimodal behavioral data collection
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="cv-skill-block cv-skill-block--blue">
+                  <h3>
+                    <span class="cv-static-highlight cv-static-highlight--blue">
+                      Data Analysis
+                    </span>
+                  </h3>
+                  <ul>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="masters-thesis,fnirs-paper"
+                      data-evidence-label="Master's thesis and higher-order fNIRS paper"
+                    >
+                      End-to-end analysis pipelines from raw signal to publication-ready results using Python (NumPy, Pandas, MNE), R, MATLAB, API calls (LLMs).
+                    </li>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="masters-thesis,fnirs-paper"
+                      data-evidence-label="Master's thesis and higher-order fNIRS paper"
+                    >
+                      Statistical modelling
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="cv-skill-block cv-skill-block--rose">
+                  <h3>
+                    <span class="cv-static-highlight cv-static-highlight--rose">
+                      Clinical Experience
+                    </span>
+                  </h3>
+                  <ul>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="psychology-traineeship,medical-internship"
+                      data-evidence-label="Psychology traineeship and medical student internship"
+                    >
+                      Patient assessment and interview
+                    </li>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="psychology-traineeship"
+                      data-evidence-label="Psychology traineeship"
+                    >
+                      Psychological tests and questionnaires administration and scoring
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="cv-skill-block cv-skill-block--sand">
+                  <h3>
+                    <span class="cv-static-highlight cv-static-highlight--sand">
+                      Research Methods
+                    </span>
+                  </h3>
+                  <ul>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="masters-thesis,student-research-assistant"
+                      data-evidence-label="Master's thesis and student research assistant experience"
+                    >
+                      Experimental design and participant recruitment and management
+                    </li>
+                    <li
+                      class="cv-skill-evidence"
+                      tabindex="0"
+                      aria-describedby="skillEvidenceHint"
+                      data-evidence="masters-thesis,fnirs-paper,bachelors-thesis"
+                      data-evidence-label="Master's thesis, higher-order fNIRS paper, and bachelor's dissertation"
+                    >
+                      Academic writing and literature review
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p id="skillEvidenceHint" class="sr-only">
+                Hover over or focus this skill to highlight the professional experience and research outputs where it was developed.
+              </p>
+              <p id="skillEvidenceStatus" class="sr-only" aria-live="polite"></p>
+            </div>
+          </section>
+
+          <section class="cv-section" aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
+            <div class="cv-section__body">
+              <p class="education-entry">
+                <span class="education-entry__logo education-entry__logo--unito" aria-hidden="true">
+                  <img src="/assets/images/universities/university-of-turin.svg" alt="" />
+                </span>
+                <span class="education-entry__content">
+                  <span class="education-entry__details">
+                    <a
+                      class="cv-hotspot cv-hotspot--blue cv-hotspot--inline"
+                      href="https://unito.coursecatalogue.cineca.it/corsi/2024/7382"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      MSc in Body and Mind Sciences
+                    </a>
+                    <span class="education-entry__institution">University of Turin</span>
+                  </span>
+                  <span class="education-period education-period--blue" aria-label="September 2024 to November 2026">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                    </svg>
+                    <time datetime="2024-09">Sep 2024</time>
+                    <span class="education-period__arrow" aria-hidden="true">→</span>
+                    <time datetime="2026-11">Nov 2026</time>
+                  </span>
+                </span>
+              </p>
+              <p class="education-entry">
+                <span class="education-entry__logo education-entry__logo--unito" aria-hidden="true">
+                  <img src="/assets/images/universities/university-of-turin.svg" alt="" />
+                </span>
+                <span class="education-entry__content">
+                  <span class="education-entry__details">
+                    <a
+                      class="cv-hotspot cv-hotspot--sand cv-hotspot--inline"
+                      href="https://unito.coursecatalogue.cineca.it/corsi/2022/1154"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      BSc in Psychological Sciences and Techniques
+                    </a>
+                    <span class="education-entry__institution">University of Turin</span>
+                  </span>
+                  <span class="education-period education-period--sand" aria-label="September 2021 to July 2024">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                    </svg>
+                    <time datetime="2021-09">Sep 2021</time>
+                    <span class="education-period__arrow" aria-hidden="true">→</span>
+                    <time datetime="2024-07">Jul 2024</time>
+                  </span>
+                </span>
+              </p>
+              <p class="education-entry">
+                <span class="education-entry__logo education-entry__logo--unipd" aria-hidden="true">
+                  <img src="/assets/images/universities/university-of-padua.svg" alt="" />
+                </span>
+                <span class="education-entry__content">
+                  <span class="education-entry__details">
+                    Student of
+                    <a
+                      class="cv-hotspot cv-hotspot--rose cv-hotspot--inline"
+                      href="https://apply.unipd.it/courses/course/36-medicine-and-surgery"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Medicine and Surgery
+                    </a>
+                    <span class="education-entry__institution">University of Padua</span>
+                  </span>
+                  <span class="education-period education-period--rose" aria-label="September 2017 to March 2020">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                    </svg>
+                    <time datetime="2017-09">Sep 2017</time>
+                    <span class="education-period__arrow" aria-hidden="true">→</span>
+                    <time datetime="2020-03">Mar 2020</time>
+                  </span>
+                </span>
+              </p>
+            </div>
+          </section>
+
+          <section class="cv-section" aria-labelledby="outputs-heading">
+            <h2 id="outputs-heading">Research<br />Outputs</h2>
+            <div class="cv-section__body">
+              <p>
+                <button class="cv-hotspot cv-hotspot--blue cv-hotspot--multiline" type="button" data-detail="fnirs-paper">
+                  <span class="cv-hotspot__marker">Higher-order models for fNIRS hyperscanning in complex and ecological interactions.</span>
+                </button>
+                <em>(Manuscript in preparation; abstract presented and discussed at ESCAN 2026; author and contributor).</em>
+              </p>
+              <p>
+                <button class="cv-hotspot cv-hotspot--blue cv-hotspot--underline" type="button" data-detail="masters-thesis">
+                  Master's Thesis:
+                </button>
+                "Use of modern LLMs in psychology research: extracting social features from multimodal data in social settings"
+              </p>
+              <p>
+                <button class="cv-hotspot cv-hotspot--sand cv-hotspot--underline" type="button" data-detail="bachelors-thesis">
+                  Bachelor's Dissertation:
+                </button>
+                "The predictive brain: understanding depression through allostasis"
+              </p>
+            </div>
+          </section>
+
+          <section class="cv-section" aria-labelledby="other-heading">
+            <h2 id="other-heading">Other</h2>
+            <div class="cv-section__body">
+              <div class="cv-other-grid">
+                <div>
+                  <h3>
+                    <button class="cv-hotspot cv-hotspot--sand" type="button" data-detail="research-interests">
+                      Research Interests
+                    </button>
+                  </h3>
+                  <p>Predictive processing &amp; interoception; bioelectric cognition; pain &amp; placebo; cortical computation.</p>
+                </div>
+                <div>
+                  <h3>Languages</h3>
+                  <p>Native: Italian, Romanian<br />Proficient: English (C2)</p>
+                </div>
+                <div>
+                  <h3>
+                    <button class="cv-hotspot cv-hotspot--teal" type="button" data-detail="hobbies-passions">
+                      Hobbies &amp; Passions
+                    </button>
+                  </h3>
+                  <p>AI, competitive games, space, biotech.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <aside
+          id="detailPanel"
+          class="detail-panel"
+          aria-label="CV detail"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <button id="detailClose" class="detail-close" type="button" aria-label="Close detail panel">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.75 6.75 17.25 17.25M17.25 6.75 6.75 17.25" />
+            </svg>
+          </button>
+          <p id="detailKicker" class="detail-kicker"></p>
+          <h2 id="detailTitle"></h2>
+          <p id="detailMeta" class="detail-meta"></p>
+          <div id="detailBody" class="detail-body"></div>
+          <div id="detailActions" class="detail-actions"></div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Radu N. Covaci</p>
+    </footer>
+
+    <script src="/script.js?v=20260625f"></script>
+  </body>
+</html>

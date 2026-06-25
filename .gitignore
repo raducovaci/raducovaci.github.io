@@ -1,0 +1,14 @@
+# Local runtime and tooling
+tmp/
+.venv/
+output/
+.agents/
+.codex/
+
+# Private source material
+assets/docs/raw/
+assets/images/generated/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

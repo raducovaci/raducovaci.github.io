@@ -2,20 +2,21 @@
   const DETAILS = {
     "academic-research": {
       tone: "blue",
-      kicker: "Professional experience",
+      kicker: "Current research",
       title: "Academic Research",
-      meta: "Master's thesis research, University of Turin, 2024-ongoing",
-      summary: "Current research work focuses on turning natural social interaction into measurable data. The thesis combines video, audio, and fNIRS signals to study when people become coordinated during real group activity.",
+      meta: "Master's thesis · University of Turin · 2024-ongoing",
+      summary: "I design an ecological group-interaction study that aligns fNIRS, video, audio, and LLM annotations to identify moments of social coordination.",
+      pointsTitle: "What it shows",
       points: [
-        "Builds a bridge between social neuroscience, multimodal data, and computational psychology.",
-        "Covers the full research workflow: paradigm design, acquisition, preprocessing, feature extraction, interpretation, and writing.",
-        "Uses LLM-based annotation as one layer of evidence, then compares those annotations with physiological synchrony measures."
+        "Carries a project from paradigm design to analysis and writing.",
+        "Connects model-derived annotations with physiological synchrony.",
+        "Works across psychology, neuroscience, and computational methods."
       ],
-      skillsTitle: "What it demonstrates",
+      skillsTitle: "Strengths in practice",
       skills: [
-        ["Research design", "Ecological multi-participant paradigms rather than isolated single-subject tasks."],
-        ["Multimodal analysis", "Time-aligned video, audio, behavioral, and fNIRS data."],
-        ["Scientific writing", "Turning a complex pipeline into a readable thesis and manuscript structure."]
+        ["Research design", "Ecological, multi-participant paradigms."],
+        ["Multimodal analysis", "Time-aligned behavioral and physiological data."],
+        ["Scientific writing", "Clear narratives for complex methods."]
       ],
       facts: [
         ["Role", "Master's thesis researcher"],
@@ -27,166 +28,174 @@
       tone: "blue",
       kicker: "Master's thesis",
       title: "Modern LLMs for social synchrony research",
-      meta: "University of Turin, Prof. Diano, 2024-2026",
-      summary: "The thesis tests whether modern multimodal LLMs can help identify emotionally and socially salient moments in natural group interaction, then compares those annotations with fNIRS hyperscanning measures of synchrony.",
+      meta: "University of Turin · Prof. Diano · 2024-2026",
+      summary: "The thesis asks whether multimodal LLMs can flag socially salient moments in natural group interaction—and whether those moments align with fNIRS synchrony.",
       notice: {
-        label: "Status",
-        text: "The PDF is not public yet because the manuscript is still in preparation. A public thesis link can be added when the final version is ready."
+        label: "Current status",
+        text: "The manuscript is still in preparation; the final PDF will be added when it becomes public."
       },
       pointsTitle: "Research logic",
       points: [
-        "Record ecological group interaction with synchronized fNIRS, video, and audio.",
-        "Use structured LLM calls to annotate salient social moments in the recorded interaction.",
-        "Validate model outputs against human judgment and compare them with physiological synchrony metrics."
+        "Capture synchronized fNIRS, video, and audio during group role-play.",
+        "Turn clips into structured social annotations with repeated LLM calls.",
+        "Compare model and human judgments with physiological synchrony."
       ],
       sectionsTitle: "Workflow",
       sections: [
         {
           title: "Design and acquisition",
           meta: "Completed",
-          text: "Collaborative role-play paradigm with synchronized fNIRS hyperscanning, video, and audio."
+          text: "Ecological four-player paradigm with synchronized recordings."
         },
         {
           title: "Annotation and validation",
           meta: "In progress",
-          text: "Gemini API workflows convert clips into structured labels; benchmarking checks reliability and model-human agreement."
+          text: "Structured outputs, reliability checks, and model-human agreement."
         },
         {
           title: "Alignment and analysis",
           meta: "Next",
-          text: "LLM annotations are aligned with fNIRS preprocessing, synchrony metrics, and statistical comparisons."
+          text: "Time-align annotations with fNIRS and synchrony metrics."
         },
         {
           title: "Interpretation and writing",
           meta: "Final step",
-          text: "Results, limitations, discussion, and figures are integrated into the final thesis manuscript."
+          text: "Integrate results, limitations, figures, and discussion."
         }
       ],
-      skillsTitle: "What it demonstrates",
+      skillsTitle: "Strengths in practice",
       skills: [
-        ["Paradigm design", "Ecological, multi-participant protocol."],
-        ["LLM workflows", "Prompts, schemas, parameters, repeated calls, and validation checks."],
-        ["Data integration", "Time-aligned multimodal signals and physiological interpretation."],
-        ["Analysis and reporting", "Statistics, figures, limitations, and manuscript structure."]
+        ["Paradigm design", "Ecological multi-participant research."],
+        ["LLM workflows", "Prompts, schemas, repeated calls, and validation."],
+        ["Data integration", "Behavioral and physiological signals on one timeline."]
       ],
       facts: [
         ["Period", "2024-2026"],
         ["Data", "fNIRS, video, audio"],
-        ["Output", "Master's thesis and related manuscript work"]
+        ["Output", "Thesis and related manuscript work"]
       ]
     },
     "psychology-traineeship": {
       tone: "rose",
-      kicker: "Professional experience",
+      kicker: "Clinical experience",
       title: "Psychology Traineeship",
-      meta: "Breast Unit oncology day hospital, Molinette Hospital, Turin, 2026",
-      summary: "Six-month clinical psychology placement in a psycho-oncology setting, mainly within the Breast Unit's oncology day hospital.",
+      meta: "Molinette Hospital · Breast Unit oncology day hospital · 2026",
+      summary: "A supervised six-month placement in psycho-oncology, supporting assessment where emotional, medical, and treatment factors meet.",
+      pointsTitle: "What I practiced",
       points: [
-        "Conducted psychological interviews and psychological history taking under supervision.",
-        "Administered, scored, and interpreted psychological tests and questionnaires.",
-        "Supported patient assessment in a context where emotional, medical, and treatment factors are tightly connected."
+        "Psychological interviews and history taking under supervision.",
+        "Test and questionnaire administration, scoring, and interpretation.",
+        "Clear, sensitive communication in a hospital setting."
       ],
-      skillsTitle: "Clinical skills",
+      skillsTitle: "Clinical strengths",
       skills: [
-        ["Interviewing", "Patient assessment and psychological history taking."],
-        ["Testing", "Questionnaire administration, scoring, and interpretation."],
-        ["Clinical context", "Exposure to psycho-oncology and hospital-based care."]
+        ["Interviewing", "Structured assessment with attention to context."],
+        ["Psychometrics", "Careful administration and scoring."],
+        ["Clinical judgment", "Integrating psychological and medical information."]
       ],
       facts: [
-        ["Setting", "Breast Unit oncology day hospital"],
+        ["Setting", "Oncology day hospital"],
         ["Focus", "Psycho-oncology"],
-        ["Supervisor", "Prof. Stanizzo"]
+        ["Supervisor", "Dr. Stanizzo"]
       ]
     },
     "student-research-assistant": {
       tone: "blue",
-      kicker: "Professional experience",
+      kicker: "Research experience",
       title: "Student Research Assistant",
-      meta: "University research projects, 2024",
-      summary: "Research assistant work across two projects: a published visual-awareness study and an early placebo/fNIRS pilot that was later cancelled.",
+      meta: "University research projects · 2024",
+      summary: "Supported a published visual-awareness study and an early placebo/fNIRS pilot, gaining practical experience with participants and protocols.",
+      pointsTitle: "What I contributed",
       points: [
-        "Recruited participants and supported experimental sessions for a visual perception study.",
-        "Helped refine the participant flow and practical feasibility of an early placebo-effect protocol.",
-        "Built hands-on familiarity with participant-facing experimental work."
+        "Recruited and coordinated participants.",
+        "Ran time-sensitive experimental sessions consistently.",
+        "Helped refine the feasibility of an early placebo protocol."
       ],
-      skillsTitle: "Research skills",
+      skillsTitle: "Research strengths",
       skills: [
-        ["Participant coordination", "Recruiting, scheduling, and guiding volunteers through sessions."],
-        ["Protocol execution", "Following established procedures consistently across sessions."],
-        ["Lab reliability", "Working carefully with timing, instructions, and participant flow."]
+        ["Participant care", "Clear instructions and reliable scheduling."],
+        ["Protocol fidelity", "Consistent execution across sessions."],
+        ["Lab reliability", "Attention to timing, flow, and data quality."]
       ],
       facts: [
         ["Role", "Research assistant"],
-        ["Area", "Visual perception and placebo research"],
+        ["Projects", "Visual awareness and placebo"],
         ["Period", "2024"]
       ]
     },
     "visual-perception": {
       tone: "blue",
-      kicker: "Research project",
+      kicker: "Published project",
       title: "Reverse-breaking continuous flash suppression",
       meta: "Consciousness and Cognition 129 (2025), 103830",
-      summary: "The study introduced reverse-breaking continuous flash suppression, a paradigm that measures how long an initially visible face takes to disappear from awareness.",
+      summary: "The study introduced reverse-bCFS to measure how long an initially visible face takes to disappear from awareness.",
+      pointsTitle: "My contribution",
       points: [
-        "Compared reverse-bCFS with standard bCFS across face-inversion and stimulus-meaning experiments.",
-        "Helped separate conscious influences from suppression-specific unconscious processing.",
-        "My contribution focused on recruiting participants and running experimental sessions, not leading the design or manuscript."
+        "Recruited and coordinated volunteers.",
+        "Administered psychophysics sessions consistently.",
+        "Contributed to data collection—not study design or manuscript leadership."
       ],
       skillsTitle: "What I practiced",
       skills: [
-        ["Recruitment", "Sourcing and coordinating volunteers for laboratory sessions."],
-        ["Psychophysics", "Administering time-sensitive visual awareness experiments consistently."],
-        ["Data quality", "Supporting reliable participant-facing data collection."]
+        ["Psychophysics", "Participant-facing visual-awareness experiments."],
+        ["Data quality", "Consistent timing and instructions."],
+        ["Research teamwork", "Reliable execution within a larger project."]
       ],
       facts: [
         ["Paradigms", "bCFS and reverse-bCFS"],
-        ["Study focus", "Conscious and unconscious visual processing"],
-        ["Role", "Recruitment and experimental sessions"]
+        ["Focus", "Visual awareness"],
+        ["Role", "Recruitment and sessions"]
       ]
     },
     "placebo-effect": {
       tone: "blue",
-      kicker: "Research project",
+      kicker: "Pilot project",
       title: "Placebo-effect experiment",
-      meta: "Cancelled pilot project, under Prof. Piedimonte",
-      summary: "This early pilot was cancelled before completion, but it provided practical experience with protocol refinement, recruitment, and initial testing in a pain/placebo paradigm.",
+      meta: "Under Prof. Piedimonte · 2024",
+      summary: "An early pain/placebo pilot combining controlled electrical stimulation with fNIRS acquisition.",
+      notice: {
+        label: "Outcome",
+        text: "The project was cancelled after initial piloting; the experience listed here is limited to the work completed."
+      },
+      pointsTitle: "My contribution",
       points: [
-        "Helped refine the experimental flow before recruitment and piloting.",
-        "Recruited volunteers and supported a small number of pilot sessions.",
-        "Gained early familiarity with combining controlled electrical stimulation and fNIRS acquisition."
+        "Helped refine experimental flow and participant feasibility.",
+        "Recruited volunteers and supported initial pilot sessions.",
+        "Coordinated stimulation and fNIRS recording."
       ],
       skillsTitle: "What it added",
       skills: [
-        ["Paradigm refinement", "Improving feasibility and participant flow before full data collection."],
-        ["Pilot testing", "Running initial sessions and observing practical constraints."],
-        ["Multimodal acquisition", "Coordinating stimulation and fNIRS recording in an experimental setting."]
+        ["Pilot testing", "Finding practical constraints early."],
+        ["Protocol refinement", "Improving flow before full recruitment."],
+        ["Acquisition", "Coordinating stimulation and fNIRS."]
       ],
       facts: [
         ["Status", "Cancelled pilot"],
-        ["Methods", "Electrical stimulation and fNIRS"],
-        ["Area", "Pain, expectation, and placebo"]
+        ["Methods", "Stimulation and fNIRS"],
+        ["Area", "Pain and placebo"]
       ]
     },
     "medical-internship": {
       tone: "rose",
-      kicker: "Professional experience",
+      kicker: "Clinical experience",
       title: "Medical Student Internship",
-      meta: "Emergency Department, Ospedale Santa Chiara, Trento, 2019-2020",
-      summary: "Emergency-department placement with supervised exposure to the practical rhythm of frontline medical care.",
+      meta: "Emergency Department · Ospedale Santa Chiara, Trento · 2019-2020",
+      summary: "A supervised emergency-department placement focused on first-contact assessment and the practical rhythm of frontline care.",
+      pointsTitle: "What I practiced",
       points: [
-        "Supported patient triage, interviewing, and medical history taking.",
-        "Contributed to clinical documentation and report writing.",
-        "Practiced basic supervised procedures, including blood draws and suturing."
+        "Patient triage, interviewing, and medical history taking.",
+        "Concise clinical documentation and report writing.",
+        "Basic supervised procedures, including blood draws and suturing."
       ],
-      skillsTitle: "Clinical exposure",
+      skillsTitle: "Clinical strengths",
       skills: [
-        ["Triage", "Understanding urgency, patient flow, and first-contact assessment."],
-        ["Documentation", "Writing concise clinical notes and reports."],
-        ["Procedures", "Supervised practice with basic medical procedures."]
+        ["Triage", "Recognising urgency and patient flow."],
+        ["Documentation", "Clear, concise clinical notes."],
+        ["Composure", "Working carefully in a fast clinical setting."]
       ],
       facts: [
         ["Setting", "Emergency Department"],
-        ["Hospital", "Ospedale Santa Chiara, Trento"],
+        ["Hospital", "Santa Chiara, Trento"],
         ["Role", "Medical student intern"]
       ]
     },
@@ -194,23 +203,24 @@
       tone: "blue",
       kicker: "Research output",
       title: "Higher-order models for fNIRS hyperscanning",
-      meta: "Manuscript in preparation, abstract discussed at ESCAN 2026",
-      summary: "This work studies group-level neural coordination beyond conventional dyadic fNIRS hyperscanning. The project uses an ecological role-play paradigm to examine how collective neural dynamics change across passive and active social interaction.",
+      meta: "Manuscript in preparation · ESCAN 2026 abstract",
+      summary: "This work examines group-level neural coordination beyond dyads, using four-player role-play to compare passive and active social interaction.",
+      pointsTitle: "Why it matters",
       points: [
-        "Moves beyond pairwise synchrony toward higher-order structure in four-player interaction.",
+        "Moves from pairwise synchrony to higher-order group structure.",
         "Combines intersubject correlation, homological scaffolds, and O-information.",
-        "Finds a contrast between stimulus-driven redundant coupling in passive tasks and richer collective dynamics during active role-play."
+        "Contrasts passive redundancy with richer active-group dynamics."
       ],
-      skillsTitle: "What it demonstrates",
+      skillsTitle: "Strengths in practice",
       skills: [
-        ["Higher-order analysis", "Interpreting fNIRS hyperscanning with topology and information-theoretic measures."],
-        ["Ecological neuroscience", "Studying interaction in a richer group setting rather than a simplified dyad."],
-        ["Scientific communication", "Condensing a complex method into a conference abstract and manuscript narrative."]
+        ["Higher-order analysis", "Topology and information-theoretic measures."],
+        ["Ecological neuroscience", "Complex interaction rather than simplified dyads."],
+        ["Communication", "Conference abstract and manuscript framing."]
       ],
       facts: [
         ["Status", "Manuscript in preparation"],
         ["Conference", "ESCAN 2026"],
-        ["Methods", "fNIRS hyperscanning and higher-order models"]
+        ["Role", "Author and contributor"]
       ],
       document: {
         title: "fNIRS hyperscanning abstract PDF",
@@ -223,21 +233,22 @@
       tone: "sand",
       kicker: "Research output",
       title: "The predictive brain",
-      meta: "Bachelor's dissertation, University of Turin, 2024",
-      summary: "This dissertation reframes depression through predictive processing and allostasis, connecting brain, body, and behavior in a literature-based theoretical account.",
+      meta: "Bachelor's dissertation · University of Turin · 2024",
+      summary: "A literature-based account of depression through predictive processing and allostasis, connecting brain, body, and behavior.",
+      pointsTitle: "Why it matters",
       points: [
-        "Integrates predictive processing, interoception, active inference, and allostatic regulation.",
-        "Links theory with evidence on default mode and salience networks, visceromotor circuitry, and treatment mechanisms.",
-        "Builds a multilevel argument for depression as maladaptive predictive regulation rather than only a symptom cluster."
+        "Integrates predictive processing, interoception, and active inference.",
+        "Connects theory with large-scale networks and visceromotor circuitry.",
+        "Frames depression as maladaptive predictive regulation."
       ],
-      skillsTitle: "What it demonstrates",
+      skillsTitle: "Strengths in practice",
       skills: [
-        ["Literature synthesis", "Connecting computational, physiological, and clinical evidence."],
-        ["Theoretical reasoning", "Turning a broad literature into a coherent mechanistic argument."],
-        ["Translational framing", "Relating theory to testable neuroimaging and treatment hypotheses."]
+        ["Literature synthesis", "Computational, physiological, and clinical evidence."],
+        ["Theoretical reasoning", "A broad literature shaped into one argument."],
+        ["Translational framing", "Theory linked to testable hypotheses."]
       ],
       facts: [
-        ["Degree", "BSc Psychological Sciences and Techniques"],
+        ["Degree", "BSc Psychological Sciences"],
         ["Year", "2024"],
         ["Format", "Literature-based dissertation"]
       ],
@@ -250,78 +261,78 @@
     },
     "research-interests": {
       tone: "sand",
-      kicker: "Research interests",
+      kicker: "Research direction",
       title: "Questions that organize the work",
-      meta: "Predictive processing, interoception, pain, and cognition",
-      summary: "The common thread is how living systems predict, integrate signals, regulate the body, and turn uncertainty into adaptive behavior.",
+      meta: "Prediction · body regulation · cognition",
+      summary: "I am interested in how living systems predict, integrate signals, and turn uncertainty into adaptive behavior.",
       pointsTitle: "Core questions",
       points: [
-        "How does the brain use prediction to regulate perception and the body?",
-        "Where does cognition begin if electrical signaling and agency-like behavior appear outside neurons?",
-        "How do expectations shape pain, placebo effects, and clinical experience?",
-        "Which neural mechanisms make predictive coding testable at the circuit level?"
+        "How does prediction regulate perception and the body?",
+        "Where does cognition begin beyond neurons?",
+        "How do expectations shape pain and placebo effects?",
+        "Which circuits could make predictive coding testable?"
       ],
       sectionsTitle: "Reference anchors",
       sections: [
         {
           title: "Interoceptive predictions in the brain",
           meta: "Barrett and Simmons, 2015",
-          text: "A foundation for thinking about the brain as an active regulator of bodily state, not a passive receiver of sensation.",
+          text: "The brain as an active regulator of bodily state.",
           href: "https://doi.org/10.1038/nrn3950",
           linkLabel: "Open paper"
         },
         {
           title: "The Computational Boundary of a 'Self'",
           meta: "Michael Levin, 2019",
-          text: "A route into broader questions about cognition, bioelectricity, and agency beyond classical neuron-centered accounts.",
+          text: "Cognition, bioelectricity, and agency beyond neurons.",
           href: "https://doi.org/10.3389/fpsyg.2019.02688",
           linkLabel: "Open paper"
         },
         {
           title: "Placebo Analgesia: A Predictive Coding Perspective",
-          meta: "Buchel, Geuter, Sprenger, and Eippert, 2014",
-          text: "A clear example of pain as inference, where expectations can alter the meaning and intensity of bodily signals.",
+          meta: "Büchel et al., 2014",
+          text: "Pain as inference shaped by expectation.",
           href: "https://doi.org/10.1016/j.neuron.2014.02.042",
           linkLabel: "Open paper"
         },
         {
           title: "Canonical Microcircuits for Predictive Coding",
           meta: "Bastos et al., 2012",
-          text: "A mechanistic anchor for connecting predictive processing theory to laminar cortical circuitry.",
+          text: "Predictive coding grounded in cortical circuitry.",
           href: "https://doi.org/10.1016/j.neuron.2012.10.038",
           linkLabel: "Open paper"
         }
       ],
       facts: [
-        ["Level", "Research direction"],
-        ["Fields", "Cognitive and affective neuroscience"],
-        ["Bridge", "Prediction, body regulation, and social behavior"]
+        ["Direction", "Cognitive and affective neuroscience"],
+        ["Bridge", "Prediction and body regulation"],
+        ["Scale", "Circuit to social behavior"]
       ]
     },
     "hobbies-passions": {
       tone: "teal",
       kicker: "Outside work",
       title: "Hobbies and interests",
-      meta: "A compact personal note",
-      summary: "The personal side is still close to the intellectual one: strategy games, AI, space, and biotechnology all circle around complex systems and how intelligence can be organized.",
+      meta: "Strategy · AI · space · biotechnology",
+      summary: "My interests outside research still revolve around complex systems, intelligence, and strategy.",
+      pointsTitle: "Personal anchors",
       points: [
-        "Built this site with Codex and follow work on interpretability, reasoning, and model behavior.",
-        "Competitive strategy games are a long-running interest, especially chess and ranked online games.",
-        "Space and biotechnology are recurring curiosity zones, mostly because both stretch how we think about life and intelligence."
+        "Follow interpretability, reasoning, and model behavior in AI.",
+        "Play chess and ranked strategy games competitively.",
+        "Keep a long-running curiosity about space and biotechnology."
       ],
-      sectionsTitle: "Personal anchors",
       sections: [
         {
           title: "AI and intelligence",
           meta: "Interpretability and model behavior",
-          text: "A favorite reference is Anthropic's work on tracing how a language model represents intermediate thoughts.",
+          text: "A reference I return to: tracing intermediate representations in language models.",
           href: "https://www.anthropic.com/research/tracing-thoughts-language-model",
           linkLabel: "Open article"
         },
         {
           title: "Competitive games",
           meta: "Chess, TFT, League of Legends, Minesweeper",
-          text: "Chess blitz top 3%, Teamfight Tactics Diamond, League of Legends Diamond, and top 100 on Minesweeper.online."
+          text: "Chess blitz top 3%; Diamond in TFT and League; top 100 on Minesweeper.online."
         }
       ],
       facts: [
@@ -335,6 +346,7 @@
   const root = document.documentElement;
   const workspace = document.getElementById("cvWorkspace");
   const panel = document.getElementById("detailPanel");
+  const scrim = document.getElementById("detailScrim");
   const closeButton = document.getElementById("detailClose");
   const themeToggle = document.getElementById("themeToggle");
   const themeColorNode = document.querySelector('meta[name="theme-color"]');
@@ -351,12 +363,13 @@
   const hotspotTones = ["blue", "sage", "rose", "sand", "violet", "coral", "teal"];
   const themeStorageKey = "rc-theme";
   const themeColors = {
-    light: "#f4f2ed",
-    dark: "#10161c"
+    light: "#f2f0ea",
+    dark: "#0d1211"
   };
-  const themeSoakDuration = 1120;
+  const themeSoakDuration = 560;
   const skillEvidenceDelay = 650;
   let activeId = null;
+  let activeTrigger = null;
   let activeSkillEvidence = null;
   let activeEvidenceTargets = [];
   let skillEvidenceTimer = null;
@@ -467,7 +480,6 @@
         const isCollapsed = section.classList.toggle("is-collapsed");
         button.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
         body.setAttribute("aria-hidden", isCollapsed ? "true" : "false");
-        body.hidden = isCollapsed;
         inner.toggleAttribute("inert", isCollapsed);
       });
     });
@@ -479,21 +491,33 @@
     }
 
     hotspots.forEach((hotspot) => {
+      if (!hotspot.hasAttribute("aria-label")) {
+        hotspot.setAttribute("aria-label", hotspot.textContent.trim().replace(/\s+/g, " "));
+      }
       hotspot.setAttribute("aria-expanded", "false");
 
       hotspot.addEventListener("click", () => {
         const id = hotspot.getAttribute("data-detail");
         if (id) {
+          activeTrigger = hotspot;
           openDetail(id, true, getHotspotTone(hotspot));
         }
       });
     });
 
     closeButton.addEventListener("click", closeDetail);
+    if (scrim) {
+      scrim.addEventListener("click", closeDetail);
+    }
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         closeDetail();
+        return;
+      }
+
+      if (event.key === "Tab" && workspace.classList.contains("is-detail-open")) {
+        keepFocusInPanel(event);
       }
     });
 
@@ -667,27 +691,62 @@
     activeId = id;
     panel.setAttribute("data-tone", hotspotTone || detail.tone || "blue");
     panel.setAttribute("aria-hidden", "false");
+    if (scrim) {
+      scrim.setAttribute("aria-hidden", "false");
+    }
     workspace.classList.add("is-detail-open");
     document.body.classList.add("is-panel-open");
 
     updateHotspotState(id);
     renderDetail(detail);
+    bodyNode.scrollTop = 0;
 
-    if (shouldFocusPanel && window.matchMedia("(max-width: 900px)").matches) {
-      window.setTimeout(() => panel.focus({ preventScroll: true }), 80);
+    if (shouldFocusPanel) {
+      window.setTimeout(() => panel.focus({ preventScroll: true }), 60);
     }
   }
 
   function closeDetail() {
-    activeId = null;
-    if (workspace) {
-      workspace.classList.remove("is-detail-open");
+    if (!workspace || !workspace.classList.contains("is-detail-open")) {
+      return;
     }
-    if (panel) {
-      panel.setAttribute("aria-hidden", "true");
+
+    const triggerToRestore = activeTrigger;
+    activeId = null;
+    activeTrigger = null;
+    workspace.classList.remove("is-detail-open");
+    panel.setAttribute("aria-hidden", "true");
+    if (scrim) {
+      scrim.setAttribute("aria-hidden", "true");
     }
     document.body.classList.remove("is-panel-open");
     updateHotspotState(null);
+
+    if (triggerToRestore && document.contains(triggerToRestore)) {
+      window.setTimeout(() => triggerToRestore.focus({ preventScroll: true }), 40);
+    }
+  }
+
+  function keepFocusInPanel(event) {
+    const focusable = Array.from(
+      panel.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => element.offsetParent !== null);
+
+    if (focusable.length === 0) {
+      event.preventDefault();
+      panel.focus({ preventScroll: true });
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && (document.activeElement === first || document.activeElement === panel)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 
   function updateHotspotState(id) {
@@ -707,11 +766,11 @@
 
     replaceChildren(bodyNode);
     renderOverview(detail);
+    renderDetailFacts(detail);
     renderNotice(detail);
     renderPoints(detail);
-    renderDetailSections(detail);
     renderDetailSkills(detail);
-    renderDetailFacts(detail);
+    renderDetailSections(detail);
     renderActions(detail);
   }
 

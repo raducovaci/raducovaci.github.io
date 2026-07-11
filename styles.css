@@ -845,6 +845,43 @@ a {
   color: var(--skill-ink);
 }
 
+.cv-skill-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cv-skill-github-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border: 1px solid color-mix(in srgb, var(--skill-ink) 28%, var(--line));
+  border-radius: 999px;
+  color: var(--skill-ink);
+  background: color-mix(in srgb, var(--skill-tone) 28%, var(--paper));
+  font-size: 0.72rem;
+  font-weight: 720;
+  line-height: 1;
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.cv-skill-github-link svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.cv-skill-github-link:hover,
+.cv-skill-github-link:focus-visible {
+  border-color: var(--skill-ink);
+  background: color-mix(in srgb, var(--skill-tone) 55%, var(--paper));
+  transform: translateY(-1px);
+}
+
 .cv-skill-block ul {
   display: grid;
   gap: 7px;

@@ -22,7 +22,7 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="/styles.css?v=20260711a" />
+    <link rel="stylesheet" href="/styles.css?v=20260721e" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to CV</a>
@@ -51,51 +51,67 @@
         <article class="cv-sheet" aria-label="Interactive curriculum vitae">
           <header class="cv-top">
             <div class="cv-top__identity">
-              <p class="cv-kicker">Curriculum Vitae</p>
               <h1>Radu N. Covaci</h1>
+              <p class="cv-top__email">
+                <span class="sr-only">Email: </span>raducovaci10 at gmail dot com
+              </p>
             </div>
             <div class="cv-top__side">
               <p class="cv-role">MSc in Mind and Body<br />Sciences, Psychologist</p>
-              <a
-                class="cv-download"
-                href="/assets/docs/public/cv-en-radu-covaci.pdf"
-                download
-                aria-label="Download CV as PDF"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3.75v10.5m0 0 3.25-3.25M12 14.25 8.75 11"></path>
-                  <path d="M5 16.25v2.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-2.5"></path>
-                </svg>
-                <span>Download paper CV</span>
-              </a>
-              <div class="cv-top__contacts" aria-label="Contact details">
-                <p class="cv-top__email">
-                  <span>Email</span>
-                  raducovaci10 at gmail dot com
-                </p>
+              <div class="cv-top__actions">
                 <a
-                  class="contact-action"
+                  class="contact-action contact-action--icon"
                   href="https://github.com/raducovaci/raducovaci.github.io"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open this website repository on GitHub"
+                  title="Open website repository on GitHub"
                 >
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <svg class="contact-action__github" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 2.25A9.75 9.75 0 0 0 8.92 21.25c.49.09.67-.21.67-.47v-1.72c-2.72.59-3.3-1.17-3.3-1.17-.44-1.12-1.08-1.42-1.08-1.42-.88-.6.07-.59.07-.59.98.07 1.49 1 1.49 1 .87 1.48 2.27 1.05 2.82.8.09-.63.34-1.05.62-1.29-2.17-.25-4.46-1.09-4.46-4.84 0-1.07.38-1.94 1-2.63-.1-.25-.43-1.25.1-2.59 0 0 .82-.26 2.68 1a9.22 9.22 0 0 1 4.88 0c1.86-1.26 2.68-1 2.68-1 .53 1.34.2 2.34.1 2.59.63.69 1 1.56 1 2.63 0 3.76-2.29 4.59-4.47 4.83.35.3.66.9.66 1.82v2.69c0 .26.18.56.68.47A9.75 9.75 0 0 0 12 2.25Z" />
                   </svg>
-                  <span>GitHub repo</span>
+                  <svg class="contact-action__arrow" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M5 11 11 5M6 5h5v5" />
+                  </svg>
+                </a>
+                <a
+                  class="cv-download"
+                  href="/assets/docs/public/cv-en-radu-covaci.pdf?v=20260721"
+                  download
+                  aria-label="Download CV as PDF"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3.75v10.5m0 0 3.25-3.25M12 14.25 8.75 11"></path>
+                    <path d="M5 16.25v2.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-2.5"></path>
+                  </svg>
+                  <span>Download paper CV</span>
                 </a>
               </div>
             </div>
           </header>
 
           <section class="cv-section" aria-labelledby="experience-heading">
-            <h2 id="experience-heading">Professional<br />Experience</h2>
+            <div class="cv-section__heading">
+              <h2 id="experience-heading">Professional<br />Experience</h2>
+              <span class="section-help">
+                <button
+                  class="section-help__trigger"
+                  type="button"
+                  aria-label="How to explore Professional Experience"
+                  aria-describedby="experienceHelp"
+                >
+                  ?
+                </button>
+                <span id="experienceHelp" class="section-help__tooltip" role="tooltip">
+                  Select any highlighted title or phrase to open a detail panel with more context.
+                </span>
+              </span>
+            </div>
             <div class="cv-section__body">
               <div class="cv-entry">
                 <h3>
                   <button class="cv-hotspot cv-hotspot--blue" type="button" data-detail="academic-research">
-                    Academic Research (2024-ongoing)
+                    Academic Research (2024-2026)
                   </button>
                 </h3>
                 <p>
@@ -104,14 +120,14 @@
                     computational aspects of social synchronicity
                   </button>,
                   with a focus on extracting social features from
-                  <strong>multimodal data</strong>
+                  <strong>multimodal data using LLMs</strong>
                   <a
                     class="cv-reference-link cv-reference-link--person cv-reference-link--blue"
                     href="https://scholar.google.com/citations?user=tR--pu0AAAAJ&amp;hl=it&amp;oi=ao"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    (under <span class="cv-reference-link__label">Prof. Diano</span>)
+                    (<span class="cv-reference-link__label">Prof. Diano</span>)
                   </a>.
                 </p>
               </div>
@@ -142,7 +158,7 @@
               <div class="cv-entry">
                 <h3>
                   <button class="cv-hotspot cv-hotspot--blue" type="button" data-detail="student-research-assistant">
-                    Student Research Assistant (2024)
+                    Student Researcher (2024)
                   </button>
                 </h3>
                 <p>
@@ -187,140 +203,199 @@
           </section>
 
           <section class="cv-section" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Technical<br />Skills</h2>
+            <div class="cv-section__heading">
+              <h2 id="skills-heading">Technical<br />Skills</h2>
+              <span class="section-help">
+                <button
+                  class="section-help__trigger"
+                  type="button"
+                  aria-label="How to explore Technical Skills"
+                  aria-describedby="skillsHelp"
+                >
+                  ?
+                </button>
+                <span id="skillsHelp" class="section-help__tooltip" role="tooltip">
+                  Hover over or focus a skill to highlight where it was developed across experience and research.
+                </span>
+              </span>
+            </div>
             <div class="cv-section__body">
               <div class="cv-skill-grid">
-                <div class="cv-skill-block cv-skill-block--blue">
-                  <h3>
-                    <span class="cv-static-highlight cv-static-highlight--blue">
-                      Neuroimaging &amp; Data Acquisition
+                <div class="cv-skill-block cv-skill-block--blue cv-skill-block--featured">
+                  <div class="analysis-feature__topline">
+                    <h3>
+                      <span class="cv-static-highlight cv-static-highlight--blue">
+                        Data Analysis
+                      </span>
+                    </h3>
+                    <p class="analysis-feature__count"><strong>3</strong> shipped projects</p>
+                  </div>
+                  <p
+                    class="analysis-feature__lead cv-skill-evidence"
+                    tabindex="0"
+                    aria-describedby="skillEvidenceHint"
+                    data-evidence="academic-research,masters-thesis,fnirs-paper,bachelors-thesis"
+                    data-evidence-label="Master's and bachelor's research, thesis work, and higher-order fNIRS paper"
+                  >
+                    End-to-end analysis pipelines from raw signals and APIs to publication-ready results and interactive data products.
+                  </p>
+                  <div class="analysis-toolbelt" aria-label="Data analysis toolkit">
+                    <span class="analysis-tool-group">
+                      <strong>Core</strong>
+                      <span>Python (NumPy, pandas, SciPy) &middot; R &middot; MATLAB &middot; SQL</span>
                     </span>
-                  </h3>
-                  <ul>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="masters-thesis,placebo-effect"
-                      data-evidence-label="Master's thesis and placebo-effect research"
-                    >
-                      EEG and fNIRS collection and preprocessing
-                    </li>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="masters-thesis,fnirs-paper"
-                      data-evidence-label="Master's thesis and higher-order fNIRS paper"
-                    >
-                      Hyperscanning for multiple-subject paradigms
-                    </li>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="masters-thesis"
-                      data-evidence-label="Master's thesis"
-                    >
-                      Multimodal behavioral data collection
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="cv-skill-block cv-skill-block--blue">
-                  <h3 class="cv-skill-heading">
-                    <span class="cv-static-highlight cv-static-highlight--blue">
-                      Data Analysis
+                    <span class="analysis-tool-group">
+                      <strong>Data products</strong>
+                      <span>API ingestion &middot; Streamlit &middot; data validation</span>
                     </span>
+                    <span class="analysis-tool-group">
+                      <strong>LLM applications</strong>
+                      <span>Hugging Face &middot; retrieval-augmented generation (RAG) &middot; structured outputs &middot; agentic workflows</span>
+                    </span>
+                    <span class="analysis-tool-group">
+                      <strong>Machine learning</strong>
+                      <span>scikit-learn &middot; XGBoost &middot; SHAP</span>
+                    </span>
+                  </div>
+                  <div class="analysis-projects" aria-label="Selected project evidence">
                     <a
-                      class="cv-skill-github-link"
+                      class="analysis-project"
                       href="https://github.com/raducovaci/sleep-arousal-phenotyping"
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="View sleep arousal phenotyping data analysis project on GitHub"
+                      aria-label="View the sleep and arousal physiological reanalysis project on GitHub"
                     >
-                      <svg aria-hidden="true" viewBox="0 0 24 24">
-                        <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.24c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.4-2.71 5.38-5.29 5.67.42.36.79 1.06.79 2.14v3.18c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7Z" />
-                      </svg>
-                      <span>GitHub</span>
+                      <span class="analysis-project__topline">
+                        <span class="analysis-project__kind">Physiological reanalysis</span>
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <path d="M8 16 16 8M9 8h7v7" />
+                        </svg>
+                      </span>
+                      <strong>Sleep &amp; arousal</strong>
+                      <span class="analysis-project__summary">Pupil, heart-rate and EEG signals carried through to robust figures.</span>
+                      <span class="analysis-project__stack">Python &middot; signal QC &middot; exact inference</span>
                     </a>
-                  </h3>
-                  <ul>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="masters-thesis,fnirs-paper"
-                      data-evidence-label="Master's thesis and higher-order fNIRS paper"
+                    <a
+                      class="analysis-project"
+                      href="https://github.com/raducovaci/trialsignal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the TrialSignal clinical-trial analysis project on GitHub"
                     >
-                      End-to-end analysis pipelines from raw signal to publication-ready results using Python (NumPy, Pandas, MNE), R, MATLAB, API calls (LLMs).
-                    </li>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="masters-thesis,fnirs-paper"
-                      data-evidence-label="Master's thesis and higher-order fNIRS paper"
+                      <span class="analysis-project__topline">
+                        <span class="analysis-project__kind">Clinical data product</span>
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <path d="M8 16 16 8M9 8h7v7" />
+                        </svg>
+                      </span>
+                      <strong>Why trials stop</strong>
+                      <span class="analysis-project__summary">5,113 anxiety and depression trials, from registry API to dashboard.</span>
+                      <span class="analysis-project__stack">API &middot; SQL &middot; ML &middot; Streamlit</span>
+                    </a>
+                    <a
+                      class="analysis-project"
+                      href="https://github.com/raducovaci/raducovaci.github.io"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the interactive CV website project on GitHub"
                     >
-                      Statistical modelling
-                    </li>
-                  </ul>
+                      <span class="analysis-project__topline">
+                        <span class="analysis-project__kind">Interactive portfolio</span>
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                          <path d="M8 16 16 8M9 8h7v7" />
+                        </svg>
+                      </span>
+                      <strong>This CV, built as a product</strong>
+                      <span class="analysis-project__summary">Recruiter-facing information design with accessible interactions.</span>
+                      <span class="analysis-project__stack">HTML &middot; CSS &middot; JavaScript</span>
+                    </a>
+                  </div>
                 </div>
 
-                <div class="cv-skill-block cv-skill-block--rose">
-                  <h3>
-                    <span class="cv-static-highlight cv-static-highlight--rose">
-                      Clinical Experience
-                    </span>
-                  </h3>
-                  <ul>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="psychology-traineeship,medical-internship"
-                      data-evidence-label="Psychology traineeship and medical student internship"
-                    >
-                      Patient assessment and interview
-                    </li>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="psychology-traineeship"
-                      data-evidence-label="Psychology traineeship"
-                    >
-                      Psychological tests and questionnaires administration and scoring
-                    </li>
-                  </ul>
-                </div>
+                <div class="cv-skill-support-grid">
+                  <div class="cv-skill-block cv-skill-block--blue">
+                    <h3>
+                      <span class="cv-static-highlight cv-static-highlight--blue">
+                        Neuroimaging &amp; Data Acquisition
+                      </span>
+                    </h3>
+                    <ul>
+                      <li
+                        class="cv-skill-evidence"
+                        tabindex="0"
+                        aria-describedby="skillEvidenceHint"
+                        data-evidence="masters-thesis,placebo-effect"
+                        data-evidence-label="Master's thesis and placebo-effect research"
+                      >
+                        EEG/fNIRS acquisition and preprocessing
+                      </li>
+                      <li
+                        class="cv-skill-evidence"
+                        tabindex="0"
+                        aria-describedby="skillEvidenceHint"
+                        data-evidence="masters-thesis,fnirs-paper"
+                        data-evidence-label="Master's thesis and higher-order fNIRS paper"
+                      >
+                        Multimodal group data collection and hyperscanning
+                      </li>
+                    </ul>
+                  </div>
 
-                <div class="cv-skill-block cv-skill-block--sand">
-                  <h3>
-                    <span class="cv-static-highlight cv-static-highlight--sand">
-                      Research Methods
-                    </span>
-                  </h3>
-                  <ul>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="masters-thesis,student-research-assistant"
-                      data-evidence-label="Master's thesis and student research assistant experience"
-                    >
-                      Experimental design and participant recruitment and management
-                    </li>
-                    <li
-                      class="cv-skill-evidence"
-                      tabindex="0"
-                      aria-describedby="skillEvidenceHint"
-                      data-evidence="masters-thesis,fnirs-paper,bachelors-thesis"
-                      data-evidence-label="Master's thesis, higher-order fNIRS paper, and bachelor's dissertation"
-                    >
-                      Academic writing and literature review
-                    </li>
-                  </ul>
+                  <div class="cv-skill-block cv-skill-block--rose">
+                    <h3>
+                      <span class="cv-static-highlight cv-static-highlight--rose">
+                        Clinical Experience
+                      </span>
+                    </h3>
+                    <ul>
+                      <li
+                        class="cv-skill-evidence"
+                        tabindex="0"
+                        aria-describedby="skillEvidenceHint"
+                        data-evidence="psychology-traineeship,medical-internship"
+                        data-evidence-label="Psychology traineeship and medical student internship"
+                      >
+                        Patient assessment and interview
+                      </li>
+                      <li
+                        class="cv-skill-evidence"
+                        tabindex="0"
+                        aria-describedby="skillEvidenceHint"
+                        data-evidence="psychology-traineeship"
+                        data-evidence-label="Psychology traineeship"
+                      >
+                        Psychological tests and questionnaires administration and scoring
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="cv-skill-block cv-skill-block--sand">
+                    <h3>
+                      <span class="cv-static-highlight cv-static-highlight--sand">
+                        Research Methods
+                      </span>
+                    </h3>
+                    <ul>
+                      <li
+                        class="cv-skill-evidence"
+                        tabindex="0"
+                        aria-describedby="skillEvidenceHint"
+                        data-evidence="masters-thesis,student-research-assistant"
+                        data-evidence-label="Master's thesis and student researcher experience"
+                      >
+                        Experimental design and participant recruitment and management
+                      </li>
+                      <li
+                        class="cv-skill-evidence"
+                        tabindex="0"
+                        aria-describedby="skillEvidenceHint"
+                        data-evidence="masters-thesis,fnirs-paper,bachelors-thesis"
+                        data-evidence-label="Master's thesis, higher-order fNIRS paper, and bachelor's dissertation"
+                      >
+                        Academic writing and literature review
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <p id="skillEvidenceHint" class="sr-only">
@@ -507,6 +582,6 @@
       <p>&copy; <span id="year"></span> Radu N. Covaci</p>
     </footer>
 
-    <script src="/script.js?v=20260710b"></script>
+    <script src="/script.js?v=20260721a"></script>
   </body>
 </html>

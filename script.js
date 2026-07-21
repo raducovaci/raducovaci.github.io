@@ -2,9 +2,9 @@
   const DETAILS = {
     "academic-research": {
       tone: "blue",
-      kicker: "Current research",
+      kicker: "Master's research",
       title: "Academic Research",
-      meta: "Master's thesis · University of Turin · 2024-ongoing",
+      meta: "Master's thesis · University of Turin · 2024-2026",
       summary: "I design an ecological group-interaction study that aligns fNIRS, video, audio, and LLM annotations to identify moments of social coordination.",
       pointsTitle: "What it shows",
       points: [
@@ -102,7 +102,7 @@
     "student-research-assistant": {
       tone: "blue",
       kicker: "Research experience",
-      title: "Student Research Assistant",
+      title: "Student Researcher",
       meta: "University research projects · 2024",
       summary: "Supported a published visual-awareness study and an early placebo/fNIRS pilot, gaining practical experience with participants and protocols.",
       pointsTitle: "What I contributed",
@@ -118,7 +118,7 @@
         ["Lab reliability", "Attention to timing, flow, and data quality."]
       ],
       facts: [
-        ["Role", "Research assistant"],
+        ["Role", "Student researcher"],
         ["Projects", "Visual awareness and placebo"],
         ["Period", "2024"]
       ]

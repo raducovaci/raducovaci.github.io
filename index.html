@@ -3,585 +3,327 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Radu N. Covaci | Interactive CV</title>
+    <title>Radu N. Covaci</title>
     <meta
       name="description"
-      content="Interactive curriculum vitae for Radu N. Covaci, MSc in Mind and Body Sciences and psychologist."
+      content="Radu N. Covaci, researcher at Epoch AI. Benchmark reviews, works in progress, and my own takes on what AI systems can really do."
     />
-    <meta name="theme-color" content="#f2f0ea" />
+    <meta property="og:title" content="Radu N. Covaci" />
+    <meta
+      property="og:description"
+      content="Field notes from the frontier: benchmark reviews and my own takes on what AI systems can really do."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raducovaci.github.io/" />
+    <meta name="theme-color" content="#13120f" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script>
       (function () {
+        document.documentElement.classList.add("js");
+        // Always open at the meadow: no restored scroll, no leftover #section.
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+        if (location.hash) history.replaceState(null, "", location.pathname + location.search);
         try {
           var storedTheme = window.localStorage.getItem("rc-theme");
-          var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-          var theme = storedTheme || (prefersDark ? "dark" : "light");
-          document.documentElement.dataset.theme = theme;
+          document.documentElement.dataset.theme = storedTheme || "dark";
         } catch (_error) {
-          document.documentElement.dataset.theme = "light";
+          document.documentElement.dataset.theme = "dark";
         }
       })();
     </script>
-    <link rel="stylesheet" href="/styles.css?v=20260721e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap"
+    />
+    <link rel="stylesheet" href="/home.css?v=20261011o" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to CV</a>
-    <button
-      id="themeToggle"
-      class="theme-toggle"
-      type="button"
-      aria-label="Switch to dark mode"
-      aria-pressed="false"
-    >
-      <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
-        </svg>
-      </span>
-      <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M21 14.3A8.5 8.5 0 0 1 9.7 3a7.2 7.2 0 1 0 11.3 11.3Z"></path>
-        </svg>
-      </span>
-    </button>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <main id="main" class="cv-main">
-      <div id="cvWorkspace" class="cv-workspace">
-        <article class="cv-sheet" aria-label="Interactive curriculum vitae">
-          <header class="cv-top">
-            <div class="cv-top__identity">
-              <h1>Radu N. Covaci</h1>
-              <p class="cv-top__email">
-                <span class="sr-only">Email: </span>raducovaci10 at gmail dot com
-              </p>
-            </div>
-            <div class="cv-top__side">
-              <p class="cv-role">MSc in Mind and Body<br />Sciences, Psychologist</p>
-              <div class="cv-top__actions">
-                <a
-                  class="contact-action contact-action--icon"
-                  href="https://github.com/raducovaci/raducovaci.github.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open this website repository on GitHub"
-                  title="Open website repository on GitHub"
-                >
-                  <svg class="contact-action__github" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 2.25A9.75 9.75 0 0 0 8.92 21.25c.49.09.67-.21.67-.47v-1.72c-2.72.59-3.3-1.17-3.3-1.17-.44-1.12-1.08-1.42-1.08-1.42-.88-.6.07-.59.07-.59.98.07 1.49 1 1.49 1 .87 1.48 2.27 1.05 2.82.8.09-.63.34-1.05.62-1.29-2.17-.25-4.46-1.09-4.46-4.84 0-1.07.38-1.94 1-2.63-.1-.25-.43-1.25.1-2.59 0 0 .82-.26 2.68 1a9.22 9.22 0 0 1 4.88 0c1.86-1.26 2.68-1 2.68-1 .53 1.34.2 2.34.1 2.59.63.69 1 1.56 1 2.63 0 3.76-2.29 4.59-4.47 4.83.35.3.66.9.66 1.82v2.69c0 .26.18.56.68.47A9.75 9.75 0 0 0 12 2.25Z" />
-                  </svg>
-                  <svg class="contact-action__arrow" viewBox="0 0 16 16" aria-hidden="true">
-                    <path d="M5 11 11 5M6 5h5v5" />
-                  </svg>
-                </a>
-                <a
-                  class="cv-download"
-                  href="/assets/docs/public/cv-en-radu-covaci.pdf?v=20260721"
-                  download
-                  aria-label="Download CV as PDF"
-                >
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 3.75v10.5m0 0 3.25-3.25M12 14.25 8.75 11"></path>
-                    <path d="M5 16.25v2.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-2.5"></path>
-                  </svg>
-                  <span>Download paper CV</span>
-                </a>
-              </div>
-            </div>
-          </header>
-
-          <section class="cv-section" aria-labelledby="experience-heading">
-            <div class="cv-section__heading">
-              <h2 id="experience-heading">Professional<br />Experience</h2>
-              <span class="section-help">
-                <button
-                  class="section-help__trigger"
-                  type="button"
-                  aria-label="How to explore Professional Experience"
-                  aria-describedby="experienceHelp"
-                >
-                  ?
-                </button>
-                <span id="experienceHelp" class="section-help__tooltip" role="tooltip">
-                  Select any highlighted title or phrase to open a detail panel with more context.
-                </span>
-              </span>
-            </div>
-            <div class="cv-section__body">
-              <div class="cv-entry">
-                <h3>
-                  <button class="cv-hotspot cv-hotspot--blue" type="button" data-detail="academic-research">
-                    Academic Research (2024-2026)
-                  </button>
-                </h3>
-                <p>
-                  Master's thesis research on the
-                  <button class="cv-hotspot cv-hotspot--inline cv-hotspot--blue" type="button" data-detail="masters-thesis">
-                    computational aspects of social synchronicity
-                  </button>,
-                  with a focus on extracting social features from
-                  <strong>multimodal data using LLMs</strong>
-                  <a
-                    class="cv-reference-link cv-reference-link--person cv-reference-link--blue"
-                    href="https://scholar.google.com/citations?user=tR--pu0AAAAJ&amp;hl=it&amp;oi=ao"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    (<span class="cv-reference-link__label">Prof. Diano</span>)
-                  </a>.
-                </p>
-              </div>
-
-              <div class="cv-entry">
-                <h3>
-                  <button class="cv-hotspot cv-hotspot--rose" type="button" data-detail="psychology-traineeship">
-                    Psychology Traineeship (2026)
-                  </button>
-                </h3>
-                <p>
-                  Six-month placement as a trainee psychologist in the
-                  <strong class="cv-static-highlight cv-static-highlight--rose">
-                    Clinical Psychology
-                  </strong>
-                  unit at Molinette Hospital, Turin, specialising in psycho-oncology
-                  <a
-                    class="cv-reference-link cv-reference-link--person cv-reference-link--rose"
-                    href="https://www.corep.it/anticorruzione_trasparenza/CURRICULA/STANIZZO%20MARIA%20ROSA.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    (under <span class="cv-reference-link__label">Dr. Stanizzo</span>)
-                  </a>.
-                </p>
-              </div>
-
-              <div class="cv-entry">
-                <h3>
-                  <button class="cv-hotspot cv-hotspot--blue" type="button" data-detail="student-research-assistant">
-                    Student Researcher (2024)
-                  </button>
-                </h3>
-                <p>
-                  Contributed to two research projects: one on
-                  <button class="cv-hotspot cv-hotspot--inline cv-hotspot--blue" type="button" data-detail="visual-perception">
-                    visual perception
-                  </button>
-                  <a
-                    class="cv-reference-link cv-reference-link--blue"
-                    href="https://www.sciencedirect.com/science/article/pii/S1053810025000236"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span class="cv-reference-link__label">(Consciousness and Cognition, 2025)</span>
-                  </a>
-                  and one on the
-                  <button class="cv-hotspot cv-hotspot--inline cv-hotspot--blue" type="button" data-detail="placebo-effect">
-                    placebo effect
-                  </button>
-                  <a
-                    class="cv-reference-link cv-reference-link--person cv-reference-link--blue"
-                    href="https://unifind.unito.it/individual?uri=http://irises.unito.it/resource/person/91427"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    (under <span class="cv-reference-link__label">Prof. Piedimonte</span>)
-                  </a>.
-                </p>
-              </div>
-
-              <div class="cv-entry">
-                <h3>
-                  <button class="cv-hotspot cv-hotspot--rose" type="button" data-detail="medical-internship">
-                    Medical Student Internship (2019-2020)
-                  </button>
-                </h3>
-                <p>
-                  Emergency department placement at Ospedale Santa Chiara, Trento, Italy.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="cv-section" aria-labelledby="skills-heading">
-            <div class="cv-section__heading">
-              <h2 id="skills-heading">Technical<br />Skills</h2>
-              <span class="section-help">
-                <button
-                  class="section-help__trigger"
-                  type="button"
-                  aria-label="How to explore Technical Skills"
-                  aria-describedby="skillsHelp"
-                >
-                  ?
-                </button>
-                <span id="skillsHelp" class="section-help__tooltip" role="tooltip">
-                  Hover over or focus a skill to highlight where it was developed across experience and research.
-                </span>
-              </span>
-            </div>
-            <div class="cv-section__body">
-              <div class="cv-skill-grid">
-                <div class="cv-skill-block cv-skill-block--blue cv-skill-block--featured">
-                  <div class="analysis-feature__topline">
-                    <h3>
-                      <span class="cv-static-highlight cv-static-highlight--blue">
-                        Data Analysis
-                      </span>
-                    </h3>
-                    <p class="analysis-feature__count"><strong>3</strong> shipped projects</p>
-                  </div>
-                  <p
-                    class="analysis-feature__lead cv-skill-evidence"
-                    tabindex="0"
-                    aria-describedby="skillEvidenceHint"
-                    data-evidence="academic-research,masters-thesis,fnirs-paper,bachelors-thesis"
-                    data-evidence-label="Master's and bachelor's research, thesis work, and higher-order fNIRS paper"
-                  >
-                    End-to-end analysis pipelines from raw signals and APIs to publication-ready results and interactive data products.
-                  </p>
-                  <div class="analysis-toolbelt" aria-label="Data analysis toolkit">
-                    <span class="analysis-tool-group">
-                      <strong>Core</strong>
-                      <span>Python (NumPy, pandas, SciPy) &middot; R &middot; MATLAB &middot; SQL</span>
-                    </span>
-                    <span class="analysis-tool-group">
-                      <strong>Data products</strong>
-                      <span>API ingestion &middot; Streamlit &middot; data validation</span>
-                    </span>
-                    <span class="analysis-tool-group">
-                      <strong>LLM applications</strong>
-                      <span>Hugging Face &middot; retrieval-augmented generation (RAG) &middot; structured outputs &middot; agentic workflows</span>
-                    </span>
-                    <span class="analysis-tool-group">
-                      <strong>Machine learning</strong>
-                      <span>scikit-learn &middot; XGBoost &middot; SHAP</span>
-                    </span>
-                  </div>
-                  <div class="analysis-projects" aria-label="Selected project evidence">
-                    <a
-                      class="analysis-project"
-                      href="https://github.com/raducovaci/sleep-arousal-phenotyping"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="View the sleep and arousal physiological reanalysis project on GitHub"
-                    >
-                      <span class="analysis-project__topline">
-                        <span class="analysis-project__kind">Physiological reanalysis</span>
-                        <svg aria-hidden="true" viewBox="0 0 24 24">
-                          <path d="M8 16 16 8M9 8h7v7" />
-                        </svg>
-                      </span>
-                      <strong>Sleep &amp; arousal</strong>
-                      <span class="analysis-project__summary">Pupil, heart-rate and EEG signals carried through to robust figures.</span>
-                      <span class="analysis-project__stack">Python &middot; signal QC &middot; exact inference</span>
-                    </a>
-                    <a
-                      class="analysis-project"
-                      href="https://github.com/raducovaci/trialsignal"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="View the TrialSignal clinical-trial analysis project on GitHub"
-                    >
-                      <span class="analysis-project__topline">
-                        <span class="analysis-project__kind">Clinical data product</span>
-                        <svg aria-hidden="true" viewBox="0 0 24 24">
-                          <path d="M8 16 16 8M9 8h7v7" />
-                        </svg>
-                      </span>
-                      <strong>Why trials stop</strong>
-                      <span class="analysis-project__summary">5,113 anxiety and depression trials, from registry API to dashboard.</span>
-                      <span class="analysis-project__stack">API &middot; SQL &middot; ML &middot; Streamlit</span>
-                    </a>
-                    <a
-                      class="analysis-project"
-                      href="https://github.com/raducovaci/raducovaci.github.io"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="View the interactive CV website project on GitHub"
-                    >
-                      <span class="analysis-project__topline">
-                        <span class="analysis-project__kind">Interactive portfolio</span>
-                        <svg aria-hidden="true" viewBox="0 0 24 24">
-                          <path d="M8 16 16 8M9 8h7v7" />
-                        </svg>
-                      </span>
-                      <strong>This CV, built as a product</strong>
-                      <span class="analysis-project__summary">Recruiter-facing information design with accessible interactions.</span>
-                      <span class="analysis-project__stack">HTML &middot; CSS &middot; JavaScript</span>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="cv-skill-support-grid">
-                  <div class="cv-skill-block cv-skill-block--blue">
-                    <h3>
-                      <span class="cv-static-highlight cv-static-highlight--blue">
-                        Neuroimaging &amp; Data Acquisition
-                      </span>
-                    </h3>
-                    <ul>
-                      <li
-                        class="cv-skill-evidence"
-                        tabindex="0"
-                        aria-describedby="skillEvidenceHint"
-                        data-evidence="masters-thesis,placebo-effect"
-                        data-evidence-label="Master's thesis and placebo-effect research"
-                      >
-                        EEG/fNIRS acquisition and preprocessing
-                      </li>
-                      <li
-                        class="cv-skill-evidence"
-                        tabindex="0"
-                        aria-describedby="skillEvidenceHint"
-                        data-evidence="masters-thesis,fnirs-paper"
-                        data-evidence-label="Master's thesis and higher-order fNIRS paper"
-                      >
-                        Multimodal group data collection and hyperscanning
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="cv-skill-block cv-skill-block--rose">
-                    <h3>
-                      <span class="cv-static-highlight cv-static-highlight--rose">
-                        Clinical Experience
-                      </span>
-                    </h3>
-                    <ul>
-                      <li
-                        class="cv-skill-evidence"
-                        tabindex="0"
-                        aria-describedby="skillEvidenceHint"
-                        data-evidence="psychology-traineeship,medical-internship"
-                        data-evidence-label="Psychology traineeship and medical student internship"
-                      >
-                        Patient assessment and interview
-                      </li>
-                      <li
-                        class="cv-skill-evidence"
-                        tabindex="0"
-                        aria-describedby="skillEvidenceHint"
-                        data-evidence="psychology-traineeship"
-                        data-evidence-label="Psychology traineeship"
-                      >
-                        Psychological tests and questionnaires administration and scoring
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="cv-skill-block cv-skill-block--sand">
-                    <h3>
-                      <span class="cv-static-highlight cv-static-highlight--sand">
-                        Research Methods
-                      </span>
-                    </h3>
-                    <ul>
-                      <li
-                        class="cv-skill-evidence"
-                        tabindex="0"
-                        aria-describedby="skillEvidenceHint"
-                        data-evidence="masters-thesis,student-research-assistant"
-                        data-evidence-label="Master's thesis and student researcher experience"
-                      >
-                        Experimental design and participant recruitment and management
-                      </li>
-                      <li
-                        class="cv-skill-evidence"
-                        tabindex="0"
-                        aria-describedby="skillEvidenceHint"
-                        data-evidence="masters-thesis,fnirs-paper,bachelors-thesis"
-                        data-evidence-label="Master's thesis, higher-order fNIRS paper, and bachelor's dissertation"
-                      >
-                        Academic writing and literature review
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <p id="skillEvidenceHint" class="sr-only">
-                Hover over or focus this skill to highlight the professional experience and research outputs where it was developed.
-              </p>
-              <p id="skillEvidenceStatus" class="sr-only" aria-live="polite"></p>
-            </div>
-          </section>
-
-          <section class="cv-section" aria-labelledby="outputs-heading">
-            <h2 id="outputs-heading">Research<br />Outputs</h2>
-            <div class="cv-section__body">
-              <p>
-                <button class="cv-hotspot cv-hotspot--blue cv-hotspot--multiline" type="button" data-detail="fnirs-paper">
-                  <span class="cv-hotspot__marker">Higher-order models for fNIRS hyperscanning in complex and ecological interactions.</span>
-                </button>
-                <em>(Manuscript in preparation; abstract presented and discussed at ESCAN 2026; author and contributor).</em>
-              </p>
-              <p>
-                <button class="cv-hotspot cv-hotspot--blue cv-hotspot--underline" type="button" data-detail="masters-thesis">
-                  Master's Thesis:
-                </button>
-                "Use of modern LLMs in psychology research: extracting social features from multimodal data in social settings"
-              </p>
-              <p>
-                <button class="cv-hotspot cv-hotspot--sand cv-hotspot--underline" type="button" data-detail="bachelors-thesis">
-                  Bachelor's Dissertation:
-                </button>
-                "The predictive brain: understanding depression through allostasis"
-              </p>
-            </div>
-          </section>
-
-          <section class="cv-section" aria-labelledby="education-heading">
-            <h2 id="education-heading">Education</h2>
-            <div class="cv-section__body">
-              <p class="education-entry">
-                <span class="education-entry__logo education-entry__logo--unito" aria-hidden="true">
-                  <img src="/assets/images/universities/university-of-turin.svg" alt="" />
-                </span>
-                <span class="education-entry__content">
-                  <span class="education-entry__details">
-                    <a
-                      class="cv-hotspot cv-hotspot--blue cv-hotspot--inline"
-                      href="https://unito.coursecatalogue.cineca.it/corsi/2024/7382"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      MSc in Body and Mind Sciences
-                    </a>
-                    <span class="education-entry__institution">University of Turin</span>
-                  </span>
-                  <span class="education-period education-period--blue" aria-label="September 2024 to November 2026">
-                    <svg aria-hidden="true" viewBox="0 0 24 24">
-                      <path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
-                    </svg>
-                    <time datetime="2024-09">Sep 2024</time>
-                    <span class="education-period__arrow" aria-hidden="true">→</span>
-                    <time datetime="2026-11">Nov 2026</time>
-                  </span>
-                </span>
-              </p>
-              <p class="education-entry">
-                <span class="education-entry__logo education-entry__logo--unito" aria-hidden="true">
-                  <img src="/assets/images/universities/university-of-turin.svg" alt="" />
-                </span>
-                <span class="education-entry__content">
-                  <span class="education-entry__details">
-                    <a
-                      class="cv-hotspot cv-hotspot--sand cv-hotspot--inline"
-                      href="https://unito.coursecatalogue.cineca.it/corsi/2022/1154"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      BSc in Psychological Sciences and Techniques
-                    </a>
-                    <span class="education-entry__institution">University of Turin</span>
-                  </span>
-                  <span class="education-period education-period--sand" aria-label="September 2021 to July 2024">
-                    <svg aria-hidden="true" viewBox="0 0 24 24">
-                      <path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
-                    </svg>
-                    <time datetime="2021-09">Sep 2021</time>
-                    <span class="education-period__arrow" aria-hidden="true">→</span>
-                    <time datetime="2024-07">Jul 2024</time>
-                  </span>
-                </span>
-              </p>
-              <p class="education-entry">
-                <span class="education-entry__logo education-entry__logo--unipd" aria-hidden="true">
-                  <img src="/assets/images/universities/university-of-padua.svg" alt="" />
-                </span>
-                <span class="education-entry__content">
-                  <span class="education-entry__details">
-                    Student of
-                    <a
-                      class="cv-hotspot cv-hotspot--rose cv-hotspot--inline"
-                      href="https://apply.unipd.it/courses/course/36-medicine-and-surgery"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Medicine and Surgery
-                    </a>
-                    <span class="education-entry__institution">University of Padua</span>
-                  </span>
-                  <span class="education-period education-period--rose" aria-label="September 2017 to March 2020">
-                    <svg aria-hidden="true" viewBox="0 0 24 24">
-                      <path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
-                    </svg>
-                    <time datetime="2017-09">Sep 2017</time>
-                    <span class="education-period__arrow" aria-hidden="true">→</span>
-                    <time datetime="2020-03">Mar 2020</time>
-                  </span>
-                </span>
-              </p>
-            </div>
-          </section>
-
-          <section class="cv-section" aria-labelledby="other-heading">
-            <h2 id="other-heading">Other</h2>
-            <div class="cv-section__body">
-              <div class="cv-other-grid">
-                <div>
-                  <h3>
-                    <button class="cv-hotspot cv-hotspot--sand" type="button" data-detail="research-interests">
-                      Research Interests
-                    </button>
-                  </h3>
-                  <p>Predictive processing &amp; interoception; bioelectric cognition; pain &amp; placebo; cortical computation.</p>
-                </div>
-                <div>
-                  <h3>Languages</h3>
-                  <p>Native: Italian, Romanian<br />Proficient: English (C2)</p>
-                </div>
-                <div>
-                  <h3>
-                    <button class="cv-hotspot cv-hotspot--teal" type="button" data-detail="hobbies-passions">
-                      Hobbies &amp; Passions
-                    </button>
-                  </h3>
-                  <p>AI, competitive games, space, biotech.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </article>
-
-        <button
-          id="detailScrim"
-          class="detail-scrim"
-          type="button"
-          aria-label="Close detail panel"
-          aria-hidden="true"
-          tabindex="-1"
-        ></button>
-
-        <aside
-          id="detailPanel"
-          class="detail-panel"
-          aria-label="CV detail"
-          aria-hidden="true"
-          aria-labelledby="detailTitle"
-          aria-modal="true"
-          role="dialog"
-          tabindex="-1"
-        >
-          <div class="detail-panel__header">
-            <button id="detailClose" class="detail-close" type="button" aria-label="Close detail panel">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M6.75 6.75 17.25 17.25M17.25 6.75 6.75 17.25" />
-              </svg>
+    <header id="siteNav" class="site-nav">
+      <div class="site-nav__inner">
+        <a class="wordmark" href="/" aria-label="Radu N. Covaci, home">
+          <span class="wordmark__glyph" aria-hidden="true"></span>
+          <span class="wordmark__name">Radu Covaci</span>
+        </a>
+        <nav class="site-nav__links" aria-label="Primary">
+          <span class="nav-cv-wrap">
+            <button
+              id="cvLocked"
+              class="nav-cv is-locked"
+              type="button"
+              aria-disabled="true"
+              aria-label="CV, work in progress"
+              aria-controls="cvNotice"
+              aria-expanded="false"
+            >
+              <span>CV</span>
             </button>
-            <p id="detailKicker" class="detail-kicker"></p>
-            <h2 id="detailTitle"></h2>
-            <p id="detailMeta" class="detail-meta"></p>
-          </div>
-          <div id="detailBody" class="detail-body"></div>
-          <div id="detailActions" class="detail-actions"></div>
-        </aside>
+            <span id="cvNotice" class="cv-notice" role="status" aria-live="polite" hidden>
+              <span class="cv-notice__label">Work in progress</span>
+              <span class="cv-notice__text">My CV is out of date while I rework it. Check back soon.</span>
+            </span>
+          </span>
+        </nav>
+        <button
+          id="themeToggle"
+          class="icon-button theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"></path>
+          </svg>
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a7.6 7.6 0 1 0 10.7 10.7Z"></path>
+          </svg>
+        </button>
       </div>
+    </header>
+
+    <main id="main">
+      <figure class="meadow shell reveal" aria-label="Firefly meadow">
+        <div id="meadow" class="meadow__window">
+          <canvas
+            id="meadowCanvas"
+            class="meadow__canvas"
+            role="img"
+            aria-label="A hand-drawn meadow at dusk with a small data centre on the hill. Fireflies blink out of step at first, then gradually fall into sync, and the data centre's lights pulse along with them. A small orange creature with a butterfly net keeps trying to catch them, helped by a blue cloud-shaped friend with a jar."
+          ></canvas>
+          <span class="meadow__hint" aria-hidden="true">click to startle them</span>
+        </div>
+      </figure>
+
+      <section id="work" class="section shell" aria-labelledby="work-title">
+        <div class="section__label">
+          <h2 id="work-title">Benchmark reviews</h2>
+          <p class="section__aside">with Epoch AI</p>
+        </div>
+        <div class="section__body">
+          <ol class="reviews">
+            <li class="review reveal">
+              <p class="review__meta">
+                <span class="verdict verdict--flawed">Flawed</span>
+                <time class="review__date" datetime="2026-09-29">29 Sep 2026</time>
+              </p>
+              <!-- TODO: link to the Epoch review once its URL is known. -->
+              <h3 class="review__title">OSWorld 2.1</h3>
+              <blockquote class="take">
+                <p>
+                  I think these kinds of tasks are clearly saturated. Models seem to struggle with longer tasks, but I believe
+                  that's context rot or an issue with long-context reasoning, not a lack of intelligence or bad computer use.
+                  Benchmarking is hard, and this was a good attempt for early-2026 models. We need to move on to harder stuff.
+                </p>
+              </blockquote>
+            </li>
+
+            <li class="review reveal">
+              <p class="review__meta">
+                <span class="verdict verdict--verified">Verified</span>
+                <time class="review__date" datetime="2026-09-12">12 Sep 2026</time>
+              </p>
+              <h3 class="review__title">
+                <a href="https://epoch.ai/benchmarks/exploitbench/review" target="_blank" rel="noopener">ExploitBench<span class="review__arrow" aria-hidden="true">↗</span></a>
+              </h3>
+              <blockquote class="take">
+                <p>
+                  Very narrow, but decently predictive of exploit-development ability. Let's keep an eye on the open-source
+                  models, especially since their low cost makes it possible to scale the number of tokens spent per task
+                  massively.
+                </p>
+              </blockquote>
+            </li>
+
+            <li class="review reveal">
+              <p class="review__meta">
+                <span class="verdict verdict--flawed">Flawed</span>
+                <time class="review__date" datetime="2026-09-10">10 Sep 2026</time>
+              </p>
+              <h3 class="review__title">
+                <a href="https://epoch.ai/benchmarks/healthbench-professional/review" target="_blank" rel="noopener">HealthBench Professional<span class="review__arrow" aria-hidden="true">↗</span></a>
+              </h3>
+              <blockquote class="take">
+                <p>
+                  I think models are better at answering healthcare questions than evaluations show. They clearly still have
+                  nuanced, niche failures, so a professional should always check their answers, but the floor is incredibly
+                  high. I'm super excited about billions of people having this technology in their hands.
+                </p>
+              </blockquote>
+            </li>
+
+            <li class="review reveal">
+              <p class="review__meta">
+                <span class="verdict verdict--verified">Verified</span>
+                <time class="review__date" datetime="2026-09-09">9 Sep 2026</time>
+              </p>
+              <h3 class="review__title">
+                <a href="https://epoch.ai/benchmarks/post-train-bench/review" target="_blank" rel="noopener">PostTrainBench<span class="review__arrow" aria-hidden="true">↗</span></a>
+              </h3>
+              <blockquote class="take">
+                <p>
+                  Cool concept, and well implemented. Good job on the updates and on addressing issues promptly. I'd love a
+                  new version that gives models more freedom, with tasks closer to what humans go through and similar
+                  budgets.
+                </p>
+              </blockquote>
+            </li>
+
+            <li class="review review--more reveal" aria-label="More work in progress">
+              <span class="review__more">More in progress</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="thoughts" class="section shell" aria-labelledby="thoughts-title">
+        <div class="section__label">
+          <h2 id="thoughts-title">Random thoughts</h2>
+          <p class="section__aside">on AI news, mostly</p>
+        </div>
+        <div class="section__body">
+          <ol class="reviews thoughts">
+            <!--
+              To add a thought, copy this block above the placeholder (newest first).
+              The link line is optional; drop it for a plain note.
+
+            <li class="review thought reveal">
+              <p class="review__meta">
+                <time class="review__date" datetime="2026-10-11">11 Oct 2026</time>
+              </p>
+              <h3 class="review__title thought__title">
+                <a href="https://example.com" target="_blank" rel="noopener">What happened<span class="review__arrow" aria-hidden="true">↗</span></a>
+              </h3>
+              <p class="thought__text">What I think about it.</p>
+            </li>
+            -->
+            <li class="review review--more thought-empty reveal">
+              <span class="review__more">Nothing here yet</span>
+              <svg
+                class="ice"
+                viewBox="0 0 220 104"
+                width="220"
+                height="104"
+                role="img"
+                aria-label="Clawd in a woolly hat, sitting on an upturned crate and ice fishing, waiting for a bite. The bucket beside it is empty."
+              >
+                <defs>
+                  <filter id="iceWobble" x="-5%" y="-10%" width="110%" height="120%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="7" />
+                    <feDisplacementMap in="SourceGraphic" scale="1.8" />
+                  </filter>
+                </defs>
+                <g filter="url(#iceWobble)">
+                  <!-- far shore -->
+                  <path class="ice__line ice__line--far" d="M2 72 C40 71 60 73.5 104 72.4 S180 71 218 72.6" />
+                  <path class="ice__line ice__line--far" d="M14 72 L19 61 L24 72 M17 66 H21 M26 72 L30.5 63.5 L35 72 M188 72 L192.5 62 L197 72 M190 67 H195 M199 72 L202.5 65.5 L206 72" />
+                  <!-- ice -->
+                  <path class="ice__line ice__line--hatch" d="M10 99 H34 M112 84 H128 M176 100 H206 M168 82 H186 M44 101 H66" />
+                  <!-- empty bucket -->
+                  <path class="ice__fill" d="M23 81 L25.5 93 H39.5 L42 81 Z" />
+                  <path class="ice__line" d="M23 81 Q32.5 72 42 81 M22 81 H43" />
+                  <!-- crate -->
+                  <path class="ice__fill" d="M59 93 L61 80 H85 L87 93 Z" />
+                  <path class="ice__line ice__line--soft" d="M62 86.5 H84" />
+                  <!-- hole -->
+                  <ellipse class="ice__hole" cx="152" cy="93" rx="17" ry="4.3" />
+                  <ellipse class="ice__ripple" cx="152" cy="92.6" rx="6" ry="1.5" />
+                  <!-- clawd -->
+                  <g class="ice__clawd">
+                    <rect class="ice__body" x="51" y="66" width="6" height="7" />
+                    <rect class="ice__body" x="89" y="66" width="6" height="7" />
+                    <rect class="ice__body" x="58" y="79" width="4" height="9" />
+                    <rect class="ice__body" x="64.5" y="79" width="4" height="9" />
+                    <rect class="ice__body" x="77.5" y="79" width="4" height="9" />
+                    <rect class="ice__body" x="84" y="79" width="4" height="9" />
+                    <rect class="ice__body" x="55" y="56" width="36" height="24" rx="1.5" />
+                    <g class="ice__eyes">
+                      <rect class="ice__eye" x="63.5" y="64" width="3.4" height="6" />
+                      <rect class="ice__eye" x="79" y="64" width="3.4" height="6" />
+                    </g>
+                    <path class="ice__hat" d="M54 58.5 Q54 44.5 73 44.5 Q92 44.5 92 58.5 Z" />
+                    <path class="ice__line ice__line--hat" d="M54.5 55 H91.5 M60 58 V55 M66 58 V55 M72 58 V55 M78 58 V55 M84 58 V55" />
+                    <circle class="ice__pom" cx="73" cy="42.5" r="3.2" />
+                  </g>
+                  <!-- rod, line and bobber nibble together -->
+                  <g class="ice__rig">
+                    <path class="ice__rod" d="M92 70.5 L148 39" />
+                    <circle class="ice__reel" cx="96.5" cy="68" r="2.2" />
+                    <path class="ice__fishline" d="M148 39 Q151 64 152 88.5" />
+                    <circle class="ice__bobber" cx="152" cy="90" r="2.5" />
+                    <path class="ice__bobber-top" d="M149.5 90 A2.5 2.5 0 0 1 154.5 90 Z" />
+                  </g>
+                </g>
+                <g class="ice__snow" aria-hidden="true">
+                  <circle cx="40" cy="6" r="0.9" />
+                  <circle cx="118" cy="2" r="0.8" />
+                  <circle cx="176" cy="10" r="1" />
+                  <circle cx="204" cy="4" r="0.8" />
+                </g>
+              </svg>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="about" class="section shell" aria-labelledby="about-title">
+        <div class="section__label">
+          <h2 id="about-title">About</h2>
+        </div>
+        <div class="section__body about reveal">
+          <p class="about__lead">
+            Two lives ago I was half a doctor. One life ago I was a psychologist.<br />
+            Now I'm a researcher at <a href="https://epoch.ai" target="_blank" rel="noopener">Epoch AI</a>.
+          </p>
+          <p>
+            I work on benchmark reviews and a few other projects, trying to pin down what AI systems can actually do
+            and how fast that's changing. I'm an optimist about where all of this is heading, and I think seeing it
+            clearly is part of getting there.
+          </p>
+
+          <details class="past">
+            <summary class="past__toggle">
+              <span>From previous lives</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6.5 8 10.5 12 6.5" /></svg>
+            </summary>
+            <ul class="past__list">
+              <li>
+                <a href="/assets/docs/public/fnirs-hyperscanning-abstract.pdf" target="_blank" rel="noopener">Higher-order models for fNIRS hyperscanning</a>
+                <span>ESCAN 2026 abstract · PDF</span>
+              </li>
+              <li>
+                <a href="/assets/docs/public/bachelor-thesis-predictive-brain.pdf" target="_blank" rel="noopener">The predictive brain: depression through allostasis</a>
+                <span>BSc dissertation, 2024 · PDF</span>
+              </li>
+            </ul>
+          </details>
+
+          <ul class="links">
+            <li>
+              <a class="link-pill" href="https://github.com/raducovaci" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
+              </a>
+            </li>
+            <li>
+              <a id="emailLink" class="link-pill" data-user="raducovaci10" data-domain="gmail.com">
+                <span>Say hello</span>
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11v7h-11zM2.8 4.8 8 8.8l5.2-4" /></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Radu N. Covaci</p>
+    <footer class="site-footer shell">
+      <p>&copy; <span id="year">2026</span> Radu N. Covaci · Opinions here are my own, not Epoch AI's.</p>
+      <p class="site-footer__colophon">Drawn in ink and code. The fireflies keep time with the Kuramoto model.</p>
     </footer>
 
-    <script src="/script.js?v=20260721a"></script>
+    <script src="/home.js?v=20261011n" defer></script>
   </body>
 </html>

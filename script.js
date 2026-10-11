@@ -224,7 +224,7 @@
       ],
       document: {
         title: "fNIRS hyperscanning abstract PDF",
-        href: "assets/docs/public/fnirs-hyperscanning-abstract.pdf",
+        href: "/assets/docs/public/fnirs-hyperscanning-abstract.pdf",
         viewLabel: "View abstract",
         downloadLabel: "Download PDF"
       }
@@ -254,7 +254,7 @@
       ],
       document: {
         title: "Bachelor's dissertation PDF",
-        href: "assets/docs/public/bachelor-thesis-predictive-brain.pdf",
+        href: "/assets/docs/public/bachelor-thesis-predictive-brain.pdf",
         viewLabel: "View thesis",
         downloadLabel: "Download PDF"
       }

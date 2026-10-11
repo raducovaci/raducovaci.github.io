@@ -699,6 +699,7 @@
       caught: null,
       seed: 41,
       tagSpeed: 0,
+      turnLock: 0,
       d: 0.12,
       goalD: 0.12
     };
@@ -716,9 +717,21 @@
       happy: 0,
       tagSpeed: 0,
       seed: 77,
+      turnLock: 0,
       d: 0.2,
       goalD: 0.2
     };
+    /* Turn around, but no more than about twice a second, so nobody flickers
+     * back and forth when the thing they're after is right overhead. */
+    const TURN_LOCK = 0.45;
+
+    function face(who, dir) {
+      if (dir !== who.dir && who.turnLock <= 0) {
+        who.dir = dir;
+        who.turnLock = TURN_LOCK;
+      }
+    }
+
     let tag = null;
     let tagCooldown = 8;
     let sparks = [];
@@ -1596,7 +1609,10 @@
       const k = BUDDY_SIZE * scale * sz;
       const minX = width * 0.14;
       const maxX = width * 0.86;
+      buddy.turnLock = Math.max(0, buddy.turnLock - dt);
       let targetSpeed = 0;
+      // Usually Clawd walks the way it faces; while lining up a swing it may shuffle backwards.
+      let moveDir = 0;
       let restingNet = -1.05;
       let depthRate = 0.1;
 
@@ -1628,10 +1644,10 @@
           }
           const crowd = count ? sum / count : buddy.x;
           if (Math.abs(crowd - buddy.x) > 120 * scale * sz && random() < 0.75) {
-            buddy.dir = crowd > buddy.x ? 1 : -1;
+            face(buddy, crowd > buddy.x ? 1 : -1);
             buddy.speedChoice = 22 * scale * sz;
           } else if (random() < 0.4) {
-            buddy.dir *= -1;
+            face(buddy, -buddy.dir);
           }
           // Sometimes wander deeper into the field, or back toward the front.
           if (random() < 0.45) {
@@ -1645,12 +1661,20 @@
         if (!fly || fly === buddy.caught || buddy.timer <= 0 || fly.x < minX - 20 || fly.x > maxX + 20) {
           buddy.state = "wander";
           buddy.timer = 1;
+          // Give up gracefully instead of locking straight back onto the same one.
+          buddy.look = 1.2 + random();
         } else {
           buddy.goalD = flyDepth(fly);
           depthRate = 0.35;
+          // Face the firefly, but only turn once it's clearly behind.
+          if ((fly.x - buddy.x) * buddy.dir < -10 * scale * sz) {
+            face(buddy, -buddy.dir);
+          }
+          // Stand a net's length away from it: step in if far, back off if right underneath.
           const dx = fly.x - (buddy.x + buddy.dir * 30 * k);
-          buddy.dir = fly.x >= buddy.x ? 1 : -1;
-          targetSpeed = Math.abs(dx) > 6 ? 62 * scale * sz : 0;
+          moveDir = Math.sign(dx);
+          const forward = moveDir === buddy.dir;
+          targetSpeed = Math.abs(dx) > 6 ? (forward ? 62 : 22) * scale * sz : 0;
           restingNet = -1.3;
           const inReach = fly.y > buddyGround() - 110 * scale * sz;
           if (Math.abs(dx) < 16 * scale * sz && inReach && Math.abs(buddy.d - flyDepth(fly)) < 0.08) {
@@ -1704,13 +1728,13 @@
         buddy.timer -= dt;
         restingNet = -1.2;
         const gap = pal.x - buddy.x;
-        buddy.dir = gap >= 0 ? 1 : -1;
+        face(buddy, gap >= 0 ? 1 : -1);
         buddy.goalD = pal.d;
         depthRate = 0.35;
         const reach = 52 * k;
         targetSpeed = Math.abs(gap) > reach ? 52 * scale * sz : 0;
         if (pal.state === "follow") {
-          pal.dir = -buddy.dir;
+          face(pal, -buddy.dir);
         }
         const sameDepth = Math.abs(buddy.d - pal.d) < 0.05;
         if ((Math.abs(gap) <= reach + 2 && sameDepth && pal.state === "follow") || buddy.timer <= 0) {
@@ -1777,12 +1801,14 @@
       }
 
       buddy.speed += (targetSpeed - buddy.speed) * (1 - Math.exp(-dt * 6));
-      buddy.x += buddy.dir * buddy.speed * dt;
+      buddy.x += (moveDir || buddy.dir) * buddy.speed * dt;
       buddy.d = approach(buddy.d, buddy.goalD, depthRate * dt);
       if (buddy.x < minX || buddy.x > maxX) {
         buddy.x = clamp(buddy.x, minX, maxX);
+        // Bounce off the edge of the field, facing back in.
         if (buddy.state === "wander") {
-          buddy.dir *= -1;
+          buddy.dir = buddy.x <= minX ? 1 : -1;
+          buddy.turnLock = TURN_LOCK;
         }
       }
 
@@ -1885,16 +1911,16 @@
         // The one who was just tagged counts to one while the other gets a head start.
         tag.pause -= dt;
         chaser.tagSpeed = 0;
-        runner.dir = cornered ? -away : away;
+        face(runner, cornered ? -away : away);
         runner.tagSpeed = 56 * scale * sz;
         return;
       }
 
-      chaser.dir = away;
+      face(chaser, away);
       chaser.goalD = runner.d;
       runner.goalD = runner.goalD ?? runner.d;
       chaser.tagSpeed = 50 * scale * sz;
-      runner.dir = cornered ? -away : away;
+      face(runner, cornered ? -away : away);
       runner.tagSpeed = 40 * scale * sz;
 
       if (Math.abs(gap) < 30 * k && Math.abs(buddy.d - pal.d) < 0.08) {
@@ -1923,6 +1949,7 @@
     function updatePal(dt) {
       const sz = sizeAt(pal.d);
       const k = BUDDY_SIZE * scale * sz;
+      pal.turnLock = Math.max(0, pal.turnLock - dt);
       let targetSpeed = 0;
       pal.happy = Math.max(0, pal.happy - dt);
 
@@ -1937,14 +1964,14 @@
         const dist = Math.abs(gap);
         pal.timer -= dt;
         if (dist > 150 * k) {
-          pal.dir = Math.sign(gap) || 1;
+          face(pal, Math.sign(gap) || 1);
           targetSpeed = 26 * scale * sz;
         } else if (dist < 58 * k && buddy.state !== "deliver") {
-          pal.dir = -(Math.sign(gap) || 1);
+          face(pal, -(Math.sign(gap) || 1));
           targetSpeed = 12 * scale * sz;
         } else if (pal.timer <= 0) {
           pal.timer = 1 + random() * 2.5;
-          pal.dir = random() < 0.7 ? Math.sign(gap) || 1 : -(Math.sign(gap) || 1);
+          face(pal, random() < 0.7 ? Math.sign(gap) || 1 : -(Math.sign(gap) || 1));
         }
       } else if (pal.state === "receive") {
         pal.lid = Math.min(1, pal.lid + dt * 5);
